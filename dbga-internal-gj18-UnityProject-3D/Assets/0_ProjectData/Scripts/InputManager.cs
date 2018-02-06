@@ -6,11 +6,12 @@ using UnityEngine.UI;
 
 public class InputManager : MonoBehaviour {
 	
-	public GameObject victim;
-	public GameObject selected;
+	private GameObject victim;
+	private GameObject selected;
+	private GameObject survivor;
 
-	private GameObject Human;
-	private GameObject Human1;
+	private GameObject Condannato1;
+	private GameObject Condannato2;
 
 	private Condannati condannati;
 
@@ -25,10 +26,12 @@ public class InputManager : MonoBehaviour {
 	private int currentNobiliUccisi = 0;
 	private int currentPopolaniUccisi = 0;
 
+	private Animator myAnimator;
+
 	void Start()
 	{
-		Human = GameObject.Find ("Condannato1");
-		Human1 = GameObject.Find ("Condannato2");
+		Condannato1 = GameObject.Find ("Vittima");
+		Condannato2 = GameObject.Find ("Vittima1");
 
 	}
 
@@ -39,50 +42,66 @@ public class InputManager : MonoBehaviour {
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			RaycastHit hit;
 
-			if (Physics.Raycast (ray, out hit))
-			{
-				if (hit.transform.name == "Condannato1") {
+			if (Physics.Raycast (ray, out hit)) {
+													
+				if (hit.transform.GetComponent<Condannati> ()) {
 					
-					Debug.Log ("This is a Human");
-					selected = Human;
-					descriptionText.text = selected.GetComponent<Condannati> ().description;
+					if (hit.transform.gameObject == Condannato1) {
+						
+						Debug.Log ("This is a Human1");   
+						selected = Condannato1;
+						survivor = Condannato2;
+						descriptionText.text = selected.GetComponent<Condannati> ().description;
 
-				} else if (hit.transform.name == "Condannato2") {
-					
-					Debug.Log ("This is a Human1");   
-					selected = Human1;
-					descriptionText.text  = selected.GetComponent<Condannati> ().description;
+					} else {
+						
+						Debug.Log ("This is a Human");
+						selected = Condannato2;
+						survivor = Condannato1;
+						descriptionText.text = selected.GetComponent<Condannati> ().description;
+					}
 
 				} else if (hit.transform.name == "Ceppo" && selected != null) {
 					
 					victim = selected;
-					Debug.Log ( victim + " sgozzato" );
+					Debug.Log (victim + " sgozzato");
+
+					myAnimator = victim.GetComponentInChildren<Animator> ();
+					myAnimator.SetTrigger ("Morto");
+					myAnimator = survivor.GetComponentInChildren<Animator> ();
+					myAnimator.SetTrigger ("Sopravvissuto");
 
 					currentCrowdScore += victim.GetComponent<Condannati> ().crowdScoreMod;
 					currentKingScore += victim.GetComponent<Condannati> ().kingScoreMod;
 
 					crowdScore.text = "Punteggio Popolo : " + currentCrowdScore;
-					kingScore.text = "Punteggio Re : "  + currentKingScore;
+					kingScore.text = "Punteggio Re : " + currentKingScore;
 					selected = null;
-					descriptionText.text = ""; 
+					descriptionText.text = "";
 
-					if (victim.GetComponent<Condannati> ().name == "Popolano") {
-						currentPopolaniUccisi += 1;
-						popolaniUccisi.text = "Popolani uccisi : " + (currentPopolaniUccisi);
-					} else if(victim.GetComponent<Condannati> ().name == "Nobile") {
+					if (victim.GetComponent<Condannati> ().name == "Nobili") {
+
 						currentNobiliUccisi += 1;
 						nobiliUccisi.text = "Nobili uccisi : " + (currentNobiliUccisi);
-					}
-						
 
-				}else {
+					} else {
+					
+						currentPopolaniUccisi += 1;
+						popolaniUccisi.text = "Popolani uccisi : " + (currentPopolaniUccisi);
+					}
+				}
+					
+				else {
 					
 					selected = null;
+					survivor = null;
 					Debug.Log ("This isn't a Player"); 
 					descriptionText.text = "";
 				}
 
 			}
+
 		}
-	}
+
+}
 }
