@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Condannati : MonoBehaviour {
 
+
+
 	public float crowdScoreMod = 20;
 	public float kingScoreMod = -10;
 
