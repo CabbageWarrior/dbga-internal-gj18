@@ -16,11 +16,11 @@ public class InputManager : MonoBehaviour
 
     private Condannati condannati;
 
-    public Image crowdScore;
-    public Image kingScore;
-    public Text descriptionText;
-    public Text nobiliUccisi;
-    public Text popolaniUccisi;
+    private Image crowdScore;
+    private Image kingScore;
+    private Text descriptionText;
+    private Text nobiliUccisi;
+    private Text popolaniUccisi;
 
    
 
@@ -35,7 +35,13 @@ public class InputManager : MonoBehaviour
     {
         Condannato1 = GameObject.Find("Vittima");
         Condannato2 = GameObject.Find("Vittima1");
-        
+        crowdScore = GameObject.Find("PunteggioAttualePopolo").GetComponent<Image>();
+        kingScore = GameObject.Find("PunteggioAttualeRe").GetComponent<Image>();
+        descriptionText = GameObject.Find("Description").GetComponent<Text>();
+        nobiliUccisi = GameObject.Find("Nobili").GetComponent<Text>();
+        popolaniUccisi = GameObject.Find("Popolani").GetComponent<Text>();
+
+
     }
 
     void Update()
