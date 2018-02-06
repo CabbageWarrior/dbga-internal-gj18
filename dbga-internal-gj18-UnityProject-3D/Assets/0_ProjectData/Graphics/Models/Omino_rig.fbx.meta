@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 3ad1c48b3d9dab14f9a7b63019704f38
-timeCreated: 1517929960
+guid: ba1d937b64e31b54d9d4df7cd4fee3ec
+timeCreated: 1517953832
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: Group36076
+    100000: Group27467
     100002: mixamorig:Head
     100004: mixamorig:HeadTop_End
     100006: mixamorig:Hips
@@ -32,7 +32,7 @@ ModelImporter:
     100048: mixamorig:Spine1
     100050: mixamorig:Spine2
     100052: //RootNode
-    400000: Group36076
+    400000: Group27467
     400002: mixamorig:Head
     400004: mixamorig:HeadTop_End
     400006: mixamorig:Hips
@@ -59,10 +59,10 @@ ModelImporter:
     400048: mixamorig:Spine1
     400050: mixamorig:Spine2
     400052: //RootNode
-    4300000: Group36076
-    7400000: Knees
+    4300000: Group27467
+    7400000: Take 001
     9500000: //RootNode
-    13700000: Group36076
+    13700000: Group27467
   materials:
     importMaterials: 1
     materialName: 0
@@ -86,35 +86,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Knees
-      takeName: mixamo.com
-      firstFrame: 0
-      lastFrame: 56
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
