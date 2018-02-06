@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 3ad1c48b3d9dab14f9a7b63019704f38
-timeCreated: 1517929960
+guid: bdbafb1386022de4aa197d4ff7ad17b0
+timeCreated: 1517934472
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -60,7 +60,7 @@ ModelImporter:
     400050: mixamorig:Spine2
     400052: //RootNode
     4300000: Group36076
-    7400000: Knees
+    7400000: Twist Dance
     9500000: //RootNode
     13700000: Group36076
   materials:
@@ -88,10 +88,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Knees
+      name: Twist Dance
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 56
+      lastFrame: 283
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
