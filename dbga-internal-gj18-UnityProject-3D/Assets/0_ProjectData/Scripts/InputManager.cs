@@ -16,14 +16,15 @@ public class InputManager : MonoBehaviour {
 
 	public Text crowdScore;
 	public Text kingScore;
+	public Text descriptionText;
 
 	private float currentCrowdScore = 0;
 	private float currentKingScore = 0;
 
 	void Start()
 	{
-		Human = GameObject.Find ("Human");
-		Human1 = GameObject.Find ("Human1");
+		Human = GameObject.Find ("Condannato1");
+		Human1 = GameObject.Find ("Condannato2");
 
 	}
 
@@ -36,13 +37,17 @@ public class InputManager : MonoBehaviour {
 
 			if (Physics.Raycast (ray, out hit))
 			{
-				if (hit.transform.name == "Human") {
+				if (hit.transform.name == "Condannato1") {
+					
 					Debug.Log ("This is a Human");
 					selected = Human;
+					descriptionText.text = selected.GetComponent<Condannati> ().description;
 
-				} else if (hit.transform.name == "Human1") {
+				} else if (hit.transform.name == "Condannato2") {
+					
 					Debug.Log ("This is a Human1");   
 					selected = Human1;
+					descriptionText.text  = selected.GetComponent<Condannati> ().description;
 
 				} else if (hit.transform.name == "Ceppo" && selected != null) {
 					
@@ -54,11 +59,14 @@ public class InputManager : MonoBehaviour {
 
 					crowdScore.text = "Punteggio Popolo : " + currentCrowdScore;
 					kingScore.text = "Punteggio Re : "  + currentKingScore;
+					selected = null;
+					descriptionText.text = ""; 
 
 				}else {
 					
 					selected = null;
 					Debug.Log ("This isn't a Player"); 
+					descriptionText.text = "";
 				}
 
 			}
