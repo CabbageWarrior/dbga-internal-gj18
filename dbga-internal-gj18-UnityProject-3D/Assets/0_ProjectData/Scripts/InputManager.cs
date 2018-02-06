@@ -17,9 +17,13 @@ public class InputManager : MonoBehaviour {
 	public Text crowdScore;
 	public Text kingScore;
 	public Text descriptionText;
+	public Text nobiliUccisi;
+	public Text popolaniUccisi;
 
 	private float currentCrowdScore = 0;
 	private float currentKingScore = 0;
+	private int currentNobiliUccisi = 0;
+	private int currentPopolaniUccisi = 0;
 
 	void Start()
 	{
@@ -61,6 +65,15 @@ public class InputManager : MonoBehaviour {
 					kingScore.text = "Punteggio Re : "  + currentKingScore;
 					selected = null;
 					descriptionText.text = ""; 
+
+					if (victim.GetComponent<Condannati> ().name == "Popolano") {
+						currentPopolaniUccisi += 1;
+						popolaniUccisi.text = "Popolani uccisi : " + (currentPopolaniUccisi);
+					} else if(victim.GetComponent<Condannati> ().name == "Nobile") {
+						currentNobiliUccisi += 1;
+						nobiliUccisi.text = "Nobili uccisi : " + (currentNobiliUccisi);
+					}
+						
 
 				}else {
 					
