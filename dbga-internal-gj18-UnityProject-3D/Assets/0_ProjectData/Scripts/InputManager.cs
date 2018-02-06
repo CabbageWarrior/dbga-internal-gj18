@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class InputManager : MonoBehaviour {
 	
 	public GameObject victim;
@@ -11,13 +12,13 @@ public class InputManager : MonoBehaviour {
 	private GameObject Human;
 	private GameObject Human1;
 
-	public Condannati condannati;
+	private Condannati condannati;
 
 	public Text crowdScore;
 	public Text kingScore;
 
 	private float currentCrowdScore = 0;
-	private float currentKingScore = 0; 
+	private float currentKingScore = 0;
 
 	void Start()
 	{
@@ -56,6 +57,7 @@ public class InputManager : MonoBehaviour {
 
 				}else {
 					
+					selected = null;
 					Debug.Log ("This isn't a Player"); 
 				}
 

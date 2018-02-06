@@ -12,9 +12,7 @@ public class Condannati : MonoBehaviour {
 
 	void Start () {
 		
-
 	}
-	
 
 	void Update () {
 		
