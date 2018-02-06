@@ -4,104 +4,121 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class InputManager : MonoBehaviour {
-	
-	private GameObject victim;
-	private GameObject selected;
-	private GameObject survivor;
+public class InputManager : MonoBehaviour
+{
 
-	private GameObject Condannato1;
-	private GameObject Condannato2;
+    private GameObject victim;
+    private GameObject selected;
+    private GameObject survivor;
 
-	private Condannati condannati;
+    private GameObject Condannato1;
+    private GameObject Condannato2;
 
-	public Text crowdScore;
-	public Text kingScore;
-	public Text descriptionText;
-	public Text nobiliUccisi;
-	public Text popolaniUccisi;
+    private Condannati condannati;
 
-	private float currentCrowdScore = 0;
-	private float currentKingScore = 0;
-	private int currentNobiliUccisi = 0;
-	private int currentPopolaniUccisi = 0;
+    public Image crowdScore;
+    public Image kingScore;
+    public Text descriptionText;
+    public Text nobiliUccisi;
+    public Text popolaniUccisi;
 
-	private Animator myAnimator;
+   
 
-	void Start()
-	{
-		Condannato1 = GameObject.Find ("Vittima");
-		Condannato2 = GameObject.Find ("Vittima1");
+    private float currentCrowdScore = 0;
+    private float currentKingScore = 0;
+    private int currentNobiliUccisi = 0;
+    private int currentPopolaniUccisi = 0;
 
-	}
+    private Animator myAnimator;
 
-	void Update(){
-		
-		if (Input.GetMouseButtonDown (0))
-		{
-			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-			RaycastHit hit;
+    void Start()
+    {
+        Condannato1 = GameObject.Find("Vittima");
+        Condannato2 = GameObject.Find("Vittima1");
+        
+    }
 
-			if (Physics.Raycast (ray, out hit)) {
-													
-				if (hit.transform.GetComponent<Condannati> ()) {
-					
-					if (hit.transform.gameObject == Condannato1) {
-						
-						Debug.Log ("This is a Human1");   
-						selected = Condannato1;
-						survivor = Condannato2;
-						descriptionText.text = selected.GetComponent<Condannati> ().description;
+    void Update()
+    {
 
-					} else {
-						
-						Debug.Log ("This is a Human");
-						selected = Condannato2;
-						survivor = Condannato1;
-						descriptionText.text = selected.GetComponent<Condannati> ().description;
-					}
+        crowdScore.rectTransform.sizeDelta = new Vector2(40, currentCrowdScore * 2);
+        kingScore.rectTransform.sizeDelta = new Vector2(40, currentKingScore * 2);
+        
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
 
-				} else if (hit.transform.name == "Ceppo" && selected != null) {
-					
-					victim = selected;
-					Debug.Log (victim + " sgozzato");
+            if (Physics.Raycast(ray, out hit))
+            {
 
-					myAnimator = victim.GetComponentInChildren<Animator> ();
-					myAnimator.SetTrigger ("Morto");
-					myAnimator = survivor.GetComponentInChildren<Animator> ();
-					myAnimator.SetTrigger ("Sopravvissuto");
+                if (hit.transform.GetComponent<Condannati>())
+                {
 
-					currentCrowdScore += victim.GetComponent<Condannati> ().crowdScoreMod;
-					currentKingScore += victim.GetComponent<Condannati> ().kingScoreMod;
+                    if (hit.transform.gameObject == Condannato1)
+                    {
 
-					crowdScore.text = "Punteggio Popolo : " + currentCrowdScore;
-					kingScore.text = "Punteggio Re : " + currentKingScore;
-					selected = null;
-					descriptionText.text = "";
+                        Debug.Log("This is a Human1");
+                        selected = Condannato1;
+                        survivor = Condannato2;
+                        descriptionText.text = selected.GetComponent<Condannati>().description;
 
-					if (victim.GetComponent<Condannati> ().name == "Nobili") {
+                    }
+                    else
+                    {
 
-						currentNobiliUccisi += 1;
-						nobiliUccisi.text = "Nobili uccisi : " + (currentNobiliUccisi);
+                        Debug.Log("This is a Human");
+                        selected = Condannato2;
+                        survivor = Condannato1;
+                        descriptionText.text = selected.GetComponent<Condannati>().description;
+                    }
 
-					} else {
-					
-						currentPopolaniUccisi += 1;
-						popolaniUccisi.text = "Popolani uccisi : " + (currentPopolaniUccisi);
-					}
-				}
-					
-				else {
-					
-					selected = null;
-					survivor = null;
-					Debug.Log ("This isn't a Player"); 
-					descriptionText.text = "";
-				}
+                }
+                else if (hit.transform.name == "Ceppo" && selected != null)
+                {
 
-			}
+                    victim = selected;
+                    Debug.Log(victim + " sgozzato");
 
-		}
+                    myAnimator = victim.GetComponentInChildren<Animator>();
+                    myAnimator.SetTrigger("Morto");
+                    myAnimator = survivor.GetComponentInChildren<Animator>();
+                    myAnimator.SetTrigger("Sopravvissuto");
 
-}
+                    currentCrowdScore += victim.GetComponent<Condannati>().crowdScoreMod;
+                    currentKingScore += victim.GetComponent<Condannati>().kingScoreMod;
+
+                    
+                    selected = null;
+                    descriptionText.text = "";
+
+                    if (victim.GetComponent<Condannati>().name == "Nobili")
+                    {
+
+                        currentNobiliUccisi += 1;
+                        nobiliUccisi.text = "Nobili : " + (currentNobiliUccisi);
+
+                    }
+                    else
+                    {
+
+                        currentPopolaniUccisi += 1;
+                        popolaniUccisi.text = "Popolani : " + (currentPopolaniUccisi);
+                    }
+                }
+
+                else
+                {
+
+                    selected = null;
+                    survivor = null;
+                    Debug.Log("This isn't a Player");
+                    descriptionText.text = "";
+                }
+
+            }
+
+        }
+
+    }
 }
