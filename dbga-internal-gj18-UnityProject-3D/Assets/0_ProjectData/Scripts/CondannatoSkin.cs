@@ -14,15 +14,25 @@ public class CondannatoSkin : MonoBehaviour
 
     // Use this for initialization
     void Start()
-    {
-        //if (capelliSpawnPoint.transform.childCount == 0)
-        //{
-        //    Instantiate(capelliPrefab, capelliSpawnPoint.transform);
-        //}
-        //if (baffiSpawnPoint.transform.childCount == 0)
-        //{
-        //    Instantiate(baffiPrefab, baffiSpawnPoint.transform);
-        //}
+	{
+		if (capelliPrefab)
+		{
+			if (capelliSpawnPoint.transform.childCount == 0) 
+			{
+				GameObject dioBubu = Instantiate (capelliPrefab, capelliSpawnPoint.transform.position, new Quaternion(0f, capelliSpawnPoint.transform.rotation.y, 0f, 0f));
+				dioBubu.transform.SetParent(capelliSpawnPoint.transform);
+			}
+		}
+
+		if (baffiPrefab) 
+		{
+			if (baffiSpawnPoint.transform.childCount == 0)
+			{
+				GameObject dioBubu2 = Instantiate (baffiPrefab, baffiSpawnPoint.transform.position, baffiSpawnPoint.transform.rotation);
+				dioBubu2.transform.SetParent(baffiSpawnPoint.transform);
+			}
+		}
+	
     }
 
     // Update is called once per frame
