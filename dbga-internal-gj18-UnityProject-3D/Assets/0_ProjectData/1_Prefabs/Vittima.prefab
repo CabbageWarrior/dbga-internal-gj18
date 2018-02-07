@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 4885253290814664}
   - component: {fileID: 114815371224259516}
   - component: {fileID: 136765979782553854}
-  - component: {fileID: 114684338135320756}
+  - component: {fileID: 114380340787340506}
   m_Layer: 0
   m_Name: Vittima
   m_TagString: Untagged
@@ -795,7 +795,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1627826771714300}
   m_LocalRotation: {x: -0, y: 0.9014841, z: -0, w: 0.43281227}
-  m_LocalPosition: {x: -2.38, y: 0.9999999, z: -2.06}
+  m_LocalPosition: {x: 1.205, y: 1.09, z: -2.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4189459525927250}
@@ -873,7 +873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 966c37016f1189046bccc0e420aee852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114684338135320756
+--- !u!114 &114380340787340506
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -884,25 +884,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0205f15710c1b5840b5878d706b6f1aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crowdScoreMod: 20
-  kingScoreMod: -10
-  rank: 0
+  crowdScoreMod: -15
+  kingScoreMod: 15
+  rank: 1
   Nome: Giacomo
-  crimine: Crimine
-  circostanza: Circostanza
-  description: Descrizione nobile
+  crimine: Crimine Popolano
+  circostanza: Circostanza Popolano
+  description: Descrizione Popolano
   possibleMatches: []
   defaultTransform: {fileID: 0}
-  deathPosition: {fileID: 0}
-  walkSpeed: 0.5
-  proximityTolerance: 0.01
 --- !u!114 &114815371224259516
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1627826771714300}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac33ddd66e280934082f2495c53b97f7, type: 3}
   m_Name: 
