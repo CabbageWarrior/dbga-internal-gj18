@@ -17,31 +17,30 @@ public class CondannatoSkin : MonoBehaviour
 	{
 		if (capelliPrefab)
 		{
-			if (capelliSpawnPoint && capelliSpawnPoint.transform.childCount == 0) 
+			if (capelliSpawnPoint)
 			{
 				capelliSpawnPoint.GetComponent<Renderer> ().enabled = false;
 
-				GameObject dioBubu = Instantiate (capelliPrefab, capelliSpawnPoint.transform.position, new Quaternion(0f, capelliSpawnPoint.transform.rotation.y, 0f, 0f));
-				dioBubu.transform.SetParent(capelliSpawnPoint.transform);
+				if (capelliSpawnPoint.transform.childCount == 0)
+				{
+					//GameObject dioBubu = Instantiate (capelliPrefab, capelliSpawnPoint.transform.position, new Quaternion(0f, capelliSpawnPoint.transform.rotation.y, 0f, 0f));
+					//dioBubu.transform.SetParent(capelliSpawnPoint.transform);
+				}
 			}
 		}
 
 		if (baffiPrefab) 
 		{
-			if (baffiSpawnPoint && baffiSpawnPoint.transform.childCount == 0)
+			if (baffiSpawnPoint)
 			{
 				baffiSpawnPoint.GetComponent<Renderer> ().enabled = false;
 
-				GameObject dioBubu2 = Instantiate (baffiPrefab, baffiSpawnPoint.transform.position, baffiSpawnPoint.transform.rotation);
-				dioBubu2.transform.SetParent(baffiSpawnPoint.transform);
+				if (baffiSpawnPoint.transform.childCount == 0)
+				{
+					//GameObject dioBubu2 = Instantiate (baffiPrefab, baffiSpawnPoint.transform.position, baffiSpawnPoint.transform.rotation);
+					//dioBubu2.transform.SetParent(baffiSpawnPoint.transform);
+				}
 			}
 		}
-	
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
