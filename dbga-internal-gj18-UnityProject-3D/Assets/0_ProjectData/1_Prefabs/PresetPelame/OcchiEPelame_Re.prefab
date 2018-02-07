@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 4549572925436258}
   - component: {fileID: 114193280457041080}
   m_Layer: 0
-  m_Name: OcchiEPelame_Re 1
+  m_Name: OcchiEPelame_Re
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
