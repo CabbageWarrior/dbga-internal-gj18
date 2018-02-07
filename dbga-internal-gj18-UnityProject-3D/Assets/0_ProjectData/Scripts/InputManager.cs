@@ -28,6 +28,7 @@ public class InputManager : MonoBehaviour
     private float currentKingScore = 0;
     private int currentNobiliUccisi = 0;
     private int currentPopolaniUccisi = 0;
+    private int currentSpecialiUccisi = 0;
 
     private Animator myAnimator;
 
@@ -98,19 +99,20 @@ public class InputManager : MonoBehaviour
                     selected = null;
                     descriptionText.text = "";
 
-                    if (victim.GetComponent<Condannati>().name == "Nobili")
+                    if (victim.GetComponent<Condannati>().rank == Condannati.Rank.NOBILE)
                     {
 
                         currentNobiliUccisi += 1;
                         nobiliUccisi.text = "Nobili : " + (currentNobiliUccisi);
 
                     }
-                    else
+                    else if (victim.GetComponent<Condannati>().rank == Condannati.Rank.POPOLANO)
                     {
 
                         currentPopolaniUccisi += 1;
                         popolaniUccisi.text = "Popolani : " + (currentPopolaniUccisi);
                     }
+                    
                 }
 
                 else
