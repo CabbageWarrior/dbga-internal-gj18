@@ -966,8 +966,7 @@ MonoBehaviour:
   Nome: Arsenio Lupon
   crimine: Furto
   circostanza: Banca
-  description: Purtroppo per la banda della Uno bianca le auto non sono ancora state
-    inventate.
+  description: Purtroppo per la banda, la cinquecento non l'hanno ancora inventata.
   possibleMatches:
   - {fileID: 0}
   - {fileID: 0}
