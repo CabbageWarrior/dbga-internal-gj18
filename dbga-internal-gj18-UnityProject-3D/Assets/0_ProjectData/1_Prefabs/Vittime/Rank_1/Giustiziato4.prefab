@@ -392,7 +392,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1920920752923490
 GameObject:
   m_ObjectHideFlags: 1
@@ -544,7 +544,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1884272705705610}
   m_LocalRotation: {x: -0, y: 0.9014841, z: -0, w: 0.43281227}
-  m_LocalPosition: {x: -1.14, y: 0.9999999, z: -0.95}
+  m_LocalPosition: {x: -58.19088, y: 16.946594, z: -81.88346}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4606652077178980}
@@ -885,50 +885,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0205f15710c1b5840b5878d706b6f1aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sangue: {fileID: 0}
   crowdScoreMod: 0
   kingScoreMod: -10
   rank: 0
   Nome: 
-  crimine: 
-  circostanza: 
-  description: Descrizione Nobili
+  crimine: Furto
+  circostanza: Orfanotrofio
+  description: Ha rubato le caramelle ai bambini. I genitori non hanno sporto denuncia.
   possibleMatches:
-  - {fileID: 1884272705705610, guid: b1ae77cc2eb38ab429e0b4d50246815e, type: 2}
-  - {fileID: 1884272705705610, guid: 7cc6f584822bda040aee38b427c42b19, type: 2}
-  - {fileID: 1884272705705610, guid: 85b4a3c64600cb143950ecef4ea54a48, type: 2}
-  - {fileID: 1884272705705610, guid: 32c45aceb83b1c5429b622db60bff32c, type: 2}
-  - {fileID: 1884272705705610, guid: 3f4bd02dc30e73640bf2b2260c681998, type: 2}
-  - {fileID: 1884272705705610, guid: b227d811f1ee1ca48aee7c6edcba0fa3, type: 2}
-  - {fileID: 1884272705705610, guid: bcc6fc268e24fe945a9c5464d369b180, type: 2}
-  - {fileID: 1884272705705610, guid: a178b92990bad264ebc3100b4b59b046, type: 2}
-  - {fileID: 1884272705705610, guid: 6368ca7ac80c1f54590d0ec83b58b887, type: 2}
-  - {fileID: 1884272705705610, guid: 32d85ba15c14ff049bad36828865a610, type: 2}
-  - {fileID: 1884272705705610, guid: c1c4e14b6d949904894ecd8a17432cc8, type: 2}
-  - {fileID: 1884272705705610, guid: dad81e82bb6794d4799e8666b64552b9, type: 2}
-  - {fileID: 1884272705705610, guid: 965f021701ed10a4196636d176310e2b, type: 2}
-  - {fileID: 1884272705705610, guid: 276c5eecf07cd3a43b97b6f10547ebf7, type: 2}
-  - {fileID: 1884272705705610, guid: fcf6f5f9b9d57754cafed7c8632f5c33, type: 2}
-  - {fileID: 1884272705705610, guid: 5e1092da7ecd4b34496f0a8efcda6b79, type: 2}
-  - {fileID: 1884272705705610, guid: ff982258dd096b94b932cff9d15d53c3, type: 2}
-  - {fileID: 1884272705705610, guid: b2e45ebebcf51b14fa340d89f772ccf5, type: 2}
-  - {fileID: 1884272705705610, guid: 90bc59e3931683349b1ce1d5caa31824, type: 2}
-  - {fileID: 1884272705705610, guid: 83563176905d5ee48aeffdf5c6936dc9, type: 2}
-  - {fileID: 1884272705705610, guid: 313ea8e5e8511ec40b54b81e6c4458f7, type: 2}
-  - {fileID: 1884272705705610, guid: 52adf939f50bbda43b31dff5a4643c07, type: 2}
-  - {fileID: 1884272705705610, guid: 4429c32089eec6b4f9415c11c2c0688a, type: 2}
-  - {fileID: 1884272705705610, guid: c94092ebe89b17349b6a8dbb2815c201, type: 2}
-  - {fileID: 1884272705705610, guid: 460634dcb45a5e4468b9d6289a5e1eae, type: 2}
-  - {fileID: 1884272705705610, guid: f8c4586380c7edd4cb2566f8d734031a, type: 2}
-  - {fileID: 1884272705705610, guid: b5073de4c7ea77748b5e803b85b8b915, type: 2}
-  - {fileID: 1884272705705610, guid: 98f882c59c742fa4ea7c60e96322dbaa, type: 2}
-  - {fileID: 1884272705705610, guid: fac0fe36e2ffefa4fbc7367ab9bf3c07, type: 2}
-  - {fileID: 1884272705705610, guid: e635a001d5e1ab54994954d93ff777ef, type: 2}
-  - {fileID: 1884272705705610, guid: 97000c21661c2b344a9dfa0cd90cc49d, type: 2}
-  - {fileID: 1884272705705610, guid: e9ba78b25a8eb4748ab9565283e640dc, type: 2}
-  - {fileID: 1884272705705610, guid: a7e1fa2bb05a6f94eae198d984426049, type: 2}
-  - {fileID: 1884272705705610, guid: e92fc79583954074fb6e7da66b0d1587, type: 2}
-  - {fileID: 1884272705705610, guid: 861db620b26a3ef46b146ec9f90f9ca8, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   defaultTransform: {fileID: 0}
+  deathPosition: {fileID: 0}
+  walkSpeed: 0.5
+  proximityTolerance: 0.1
+  animator: {fileID: 0}
 --- !u!114 &114438377877438198
 MonoBehaviour:
   m_ObjectHideFlags: 1
