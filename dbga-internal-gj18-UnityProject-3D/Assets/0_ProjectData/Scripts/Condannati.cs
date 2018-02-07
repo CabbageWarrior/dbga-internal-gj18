@@ -85,5 +85,8 @@ public class Condannati : MonoBehaviour
 		animator.SetTrigger("Posizionato");
 		yield return new WaitForSeconds(2);
 		animator.SetTrigger("Morto");
+
+		yield return new WaitForSeconds (4);
+		FindObjectOfType<GameManager> ().checkState (GameManager.State.INTERMEZZO);
 	}
 }
