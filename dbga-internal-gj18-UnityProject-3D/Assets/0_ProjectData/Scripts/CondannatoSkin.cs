@@ -17,7 +17,7 @@ public class CondannatoSkin : MonoBehaviour
 	{
 		if (capelliPrefab)
 		{
-			if (capelliSpawnPoint.transform.childCount == 0) 
+			if (capelliSpawnPoint && capelliSpawnPoint.transform.childCount == 0) 
 			{
 				GameObject dioBubu = Instantiate (capelliPrefab, capelliSpawnPoint.transform.position, new Quaternion(0f, capelliSpawnPoint.transform.rotation.y, 0f, 0f));
 				dioBubu.transform.SetParent(capelliSpawnPoint.transform);
@@ -26,7 +26,7 @@ public class CondannatoSkin : MonoBehaviour
 
 		if (baffiPrefab) 
 		{
-			if (baffiSpawnPoint.transform.childCount == 0)
+			if (baffiSpawnPoint && baffiSpawnPoint.transform.childCount == 0)
 			{
 				GameObject dioBubu2 = Instantiate (baffiPrefab, baffiSpawnPoint.transform.position, baffiSpawnPoint.transform.rotation);
 				dioBubu2.transform.SetParent(baffiSpawnPoint.transform);
