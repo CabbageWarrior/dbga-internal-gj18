@@ -325,6 +325,90 @@ Transform:
   m_PrefabParentObject: {fileID: 4885253290814664, guid: 07467070a8a7a2c4b9a1d6ded8e86b03,
     type: 2}
   m_PrefabInternal: {fileID: 152208900}
+--- !u!1 &350662167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 350662168}
+  - component: {fileID: 350662171}
+  - component: {fileID: 350662170}
+  - component: {fileID: 350662169}
+  m_Layer: 0
+  m_Name: TendaDX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &350662168
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 350662167}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.998, y: -0.4500001, z: -1.3400003}
+  m_LocalScale: {x: 0.98999995, y: 3.000001, z: 1.0000002}
+  m_Children: []
+  m_Father: {fileID: 1003635361}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!23 &350662169
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 350662167}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &350662170
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 350662167}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &350662171
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 350662167}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &529691512
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +584,7 @@ GameObject:
   - component: {fileID: 599489976}
   - component: {fileID: 599489975}
   m_Layer: 0
-  m_Name: Tenda
+  m_Name: TendaSX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -513,8 +597,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 599489973}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.557, y: -0.45, z: -1.34}
-  m_LocalScale: {x: 0.4, y: 3, z: 1.0000002}
+  m_LocalPosition: {x: -0.999, y: -0.45, z: -1.34}
+  m_LocalScale: {x: 0.99, y: 3, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 1003635361}
   m_RootOrder: 2
@@ -794,6 +878,8 @@ GameObject:
   - component: {fileID: 1003635360}
   - component: {fileID: 1003635359}
   - component: {fileID: 1003635358}
+  - component: {fileID: 1003635362}
+  - component: {fileID: 1003635363}
   m_Layer: 0
   m_Name: Palco
   m_TagString: Untagged
@@ -867,9 +953,41 @@ Transform:
   - {fileID: 1570826303}
   - {fileID: 1472002557}
   - {fileID: 599489974}
+  - {fileID: 350662168}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!95 &1003635362
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003635357}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 801029b04b2567549a6ecf72a0509b9d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1003635363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003635357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4627ea9936c882f4abb9a49a1d737596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vittime: []
+  currentState: 0
+  palco: {fileID: 0}
 --- !u!1 &1301014345 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1627826771714300, guid: 07467070a8a7a2c4b9a1d6ded8e86b03,
@@ -889,8 +1007,12 @@ MonoBehaviour:
   crowdScoreMod: -10
   kingScoreMod: 20
   rank: 0
-  name: Popolani
+  Nome: 
+  crimine: 
+  circostanza: 
   description: Descrizione Popolani
+  possibleMatches: []
+  defaultTransform: {fileID: 0}
 --- !u!65 &1301014347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1508,8 +1630,12 @@ MonoBehaviour:
   crowdScoreMod: 13
   kingScoreMod: -10
   rank: 0
-  name: GianGiovanni
+  Nome: 
+  crimine: 
+  circostanza: 
   description: Descrizione Nobili
+  possibleMatches: []
+  defaultTransform: {fileID: 0}
 --- !u!65 &2062224847
 BoxCollider:
   m_ObjectHideFlags: 0
