@@ -18,7 +18,21 @@ public class DeathBehaviour : StateMachineBehaviour {
 		Transform head = animator.transform.Find ("Sphere001");
 
 		if (head) {
+			
+
+			//GameObject newHead = Instantiate (head.gameObject);
+
 			head.gameObject.SetActive (false);
+
+
+//			//newHead.GetComponent<Renderer> ().enabled = false;
+//			Destroy(newHead.GetComponent("SkinnedMeshRenderer"));
+//
+//				
+//			Rigidbody aaa = newHead.gameObject.AddComponent<Rigidbody>();
+//			aaa.useGravity = false;
+//			aaa.isKinematic = true;
+//			aaa.AddForce ((Camera.main.transform.position - newHead.transform.position).normalized * 4, ForceMode.Impulse);
 		}
 	}
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using cakeslice;
 
 public class GameManager : MonoBehaviour
 {
@@ -139,8 +140,8 @@ public class GameManager : MonoBehaviour
         while (!vittima1.isAlive);
         if (vittima1 != null)
         {
-
             vittima1.gameObject.SetActive(true);
+            //vittima1.gameObject.GetComponentInChildren<Outline>().enabled = true;
             vittima1.transform.position = spawnPoint1.position;
             inputManager.Condannato1 = vittima1.gameObject;
             //vittima2 = vittima1.possibleMatches[Random.Range(0, vittima1.possibleMatches.Length)].GetComponent<Condannati>();
@@ -153,6 +154,8 @@ public class GameManager : MonoBehaviour
 
             if (vittima2 != null)
             {
+                //vittima2.gameObject.GetComponentInChildren<Outline>().enabled = true;
+
                 vittima2.gameObject.SetActive(true);
                 vittima2.transform.position = spawnPoint2.position;
                 inputManager.Condannato2 = vittima2.gameObject;

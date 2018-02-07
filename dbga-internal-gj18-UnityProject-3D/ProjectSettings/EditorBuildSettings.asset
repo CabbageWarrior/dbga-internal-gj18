@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/0_ProjectData/0_Scenes/Mesh_blockout_colorato.unity
+    path: Assets/0_ProjectData/0_Scenes/Menu.unity
+    guid: 894a226805f0044469170353feac2dfd
+  - enabled: 1
+    path: Assets/0_ProjectData/0_Scenes/MainSceneFinale.unity
     guid: 097f4b90ad60b884ab7002bf67a2cbe1
