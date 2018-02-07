@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PosizionatoBehaviour : StateMachineBehaviour {
-	float deltaTime = 1f;
+//	private MonoBehaviour monoBehaviour = null;
+//	public StateMachineBehaviour(MonoBehaviour monoBehaviour){
+//		this.monoBehaviour = monoBehaviour;
+//	}
+
+	public float deltaTime = .2f;
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-
+		//MonoBehaviour StartCoroutine(
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -28,4 +33,10 @@ public class PosizionatoBehaviour : StateMachineBehaviour {
 	//override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 	//
 	//}
+
+	IEnumerator OnStateEnter_Coroutine(){
+		yield return new WaitForSeconds (deltaTime);
+
+		GameObject.Find ("Boia").GetComponent<Animator> ().SetTrigger ("Kill");
+	}
 }

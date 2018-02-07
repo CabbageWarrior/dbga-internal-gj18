@@ -93,7 +93,7 @@ public class Condannati : MonoBehaviour
 		yield return new WaitForSeconds(walkSpeed);
 
         animator.SetTrigger("Posizionato");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(5);
         animator.SetTrigger("Morto");
 
         yield return new WaitForSeconds(3);
