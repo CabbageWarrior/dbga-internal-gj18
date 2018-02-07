@@ -80,8 +80,7 @@ public class Condannati : MonoBehaviour
         yield return null;
 
         transform.DOLookAt(deathPosition.transform.position, walkSpeed, AxisConstraint.Y);
-
-        yield return new WaitForSeconds(walkSpeed);
+		yield return new WaitForSeconds(walkSpeed);
 
         while (Mathf.Abs((transform.position - deathPosition.transform.position).sqrMagnitude) > proximityTolerance * proximityTolerance)
         {
@@ -89,6 +88,10 @@ public class Condannati : MonoBehaviour
             transform.position += (deathPosition.transform.position - transform.position).normalized * walkSpeed * Time.deltaTime;
             yield return null;
         }
+
+		transform.DOLookAt(deathPosition.transform.parent.position, walkSpeed, AxisConstraint.Y);
+		yield return new WaitForSeconds(walkSpeed);
+
         animator.SetTrigger("Posizionato");
         yield return new WaitForSeconds(2);
         animator.SetTrigger("Morto");
