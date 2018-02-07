@@ -15,8 +15,10 @@ public class GameManager : MonoBehaviour
     public Transform spawnPoint1;
     public Transform spawnPoint2;
 
+    public MenuManager MM;
     private Condannati vittima1;
     private Condannati vittima2;
+    private int actualTurn = 0;
 
     private void Awake()
     {
@@ -31,6 +33,8 @@ public class GameManager : MonoBehaviour
     }
 
 
+
+
     public void checkState(State newState)
     {
 
@@ -41,10 +45,60 @@ public class GameManager : MonoBehaviour
         else if (newState == State.ENDTURN && currentState != State.ENDTURN)
         {
             currentState = State.ENDTURN;
+            actualTurn++;
         }
         else if (newState == State.INTERMEZZO && currentState != State.INTERMEZZO)
         {
             currentState = State.INTERMEZZO;
+            if (inputManager.currentKingScore <= 0)
+            {
+                MM.finalText.text = MM.finali[0];
+                MM.finaleBello = false;
+                MM.schermataFinale.gameObject.SetActive(true);
+            }
+            else if (inputManager.currentCrowdScore <= 0)
+            {
+                MM.finalText.text = MM.finali[1];
+                MM.finaleBello = false;
+                MM.schermataFinale.gameObject.SetActive(true);
+
+            }
+            else if (inputManager.currentKingScore >= 100)
+            {
+                MM.finalText.text = MM.finali[2];
+                MM.finaleBello = false;
+                MM.schermataFinale.gameObject.SetActive(true);
+
+            }
+            else if (inputManager.currentCrowdScore >= 100)
+            {
+                MM.finalText.text = MM.finali[3];
+                MM.finaleBello = false;
+                MM.schermataFinale.gameObject.SetActive(true);
+
+            }
+            else if (actualTurn == MM.turniMax && inputManager.currentNobiliUccisi >= inputManager.currentPopolaniUccisi + MM.margineDiVittoria)
+            {
+                MM.finalText.text = MM.finali[4];
+                MM.finaleBello = true;
+                MM.schermataFinale.gameObject.SetActive(true);
+
+            }
+            else if (actualTurn == MM.turniMax && (inputManager.currentNobiliUccisi < inputManager.currentPopolaniUccisi + MM.margineDiVittoria 
+                    && inputManager.currentNobiliUccisi > inputManager.currentPopolaniUccisi - MM.margineDiVittoria))
+            {
+                MM.finalText.text = MM.finali[5];
+                MM.finaleBello = true;
+                MM.schermataFinale.gameObject.SetActive(true);
+
+            }
+            else if(actualTurn == MM.turniMax && inputManager.currentNobiliUccisi <= inputManager.currentPopolaniUccisi - MM.margineDiVittoria)
+            {
+                MM.finalText.text = MM.finali[6];
+                MM.finaleBello = true;
+                MM.schermataFinale.gameObject.SetActive(true);
+
+            }
             moveSipario();
         }
         else if (newState == State.RESPAWN && currentState != State.RESPAWN)

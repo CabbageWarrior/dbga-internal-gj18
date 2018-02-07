@@ -521,6 +521,7 @@ MonoBehaviour:
   currentState: 0
   spawnPoint1: {fileID: 0}
   spawnPoint2: {fileID: 0}
+  MM: {fileID: 0}
 --- !u!114 &114801797526979152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -534,6 +535,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Condannato1: {fileID: 0}
   Condannato2: {fileID: 0}
+  mypanel: {fileID: 0}
+  currentCrowdScore: 50
+  currentKingScore: 50
+  currentNobiliUccisi: 0
+  currentPopolaniUccisi: 0
 --- !u!136 &136801698851119778
 CapsuleCollider:
   m_ObjectHideFlags: 1
