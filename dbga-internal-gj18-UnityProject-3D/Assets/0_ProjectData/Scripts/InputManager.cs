@@ -96,32 +96,27 @@ public class InputManager : MonoBehaviour
                 }
                 else if (hit.transform.name == "Ceppo" && selected != null)
                 {
+					survivor.GetComponent<Condannati> ().Survive ();
+					
+					victim = selected;
 
-                    victim = selected;
-                    Debug.Log(victim + " sgozzato");
+					Condannati victimCondamnedData = victim.GetComponent<Condannati> ();
 
-                    myAnimator = victim.GetComponentInChildren<Animator>();
-                    myAnimator.SetTrigger("Morto");
-                    myAnimator = survivor.GetComponentInChildren<Animator>();
-                    myAnimator.SetTrigger("Sopravvissuto");
+					victimCondamnedData.PrepareToDie ();
 
-                    currentCrowdScore += victim.GetComponent<Condannati>().crowdScoreMod;
-                    currentKingScore += victim.GetComponent<Condannati>().kingScoreMod;
+					currentCrowdScore += victimCondamnedData.crowdScoreMod;
+					currentKingScore += victimCondamnedData.kingScoreMod;
 
-                    
                     selected = null;
                     descriptionText.text = "";
 
-                    if (victim.GetComponent<Condannati>().rank == Condannati.Rank.NOBILE)
+					if (victimCondamnedData.rank == Condannati.Rank.NOBILE)
                     {
-
                         currentNobiliUccisi += 1;
                         nobiliUccisi.text = "Nobili : " + (currentNobiliUccisi);
-
                     }
-                    else if (victim.GetComponent<Condannati>().rank == Condannati.Rank.POPOLANO)
+					else if (victimCondamnedData.rank == Condannati.Rank.POPOLANO)
                     {
-
                         currentPopolaniUccisi += 1;
                         popolaniUccisi.text = "Popolani : " + (currentPopolaniUccisi);
                     }
