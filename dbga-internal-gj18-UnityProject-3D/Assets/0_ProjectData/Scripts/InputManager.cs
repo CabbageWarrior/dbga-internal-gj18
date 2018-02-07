@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class InputManager : MonoBehaviour
 {
+	private Vector2 piccola = new Vector2(50,50);
+	private Vector2 media = new Vector2(100,100);
+	private Vector2 grande = new Vector2(150, 150);
+
+	private Image kingSphere;
+	private Image crowdSphere;
 
     private GameObject victim;
     private GameObject selected;
@@ -17,6 +23,7 @@ public class InputManager : MonoBehaviour
     private Condannati condannati;
 
     private Image crowdScore;
+
     private Image kingScore;
     private Text descriptionText;
     private Text nobiliUccisi;
@@ -46,7 +53,8 @@ public class InputManager : MonoBehaviour
 		nome = GameObject.Find ("Nome").GetComponent<Text> ();
 		crimine = GameObject.Find ("Crimine").GetComponent<Text> ();
 		circostanza = GameObject.Find ("Circostanza").GetComponent<Text> ();
-
+		crowdSphere = GameObject.Find ("CrowdCircle").GetComponent<Image> ();
+		kingSphere = GameObject.Find ("KingCircle").GetComponent<Image> ();
 
     }
 
@@ -79,6 +87,7 @@ public class InputManager : MonoBehaviour
 						crimine.text = Condannato1.GetComponent<Condannati> ().crimine;
 						circostanza.text = Condannato1.GetComponent<Condannati> ().circostanza;
 
+					
                     }
                     else
                     {
@@ -93,8 +102,37 @@ public class InputManager : MonoBehaviour
 						circostanza.text = Condannato2.GetComponent<Condannati> ().circostanza;
                     }
 
+					if (Mathf.Abs (selected.GetComponent<Condannati> ().crowdScoreMod) < 6) {
+
+						crowdSphere.rectTransform.sizeDelta = piccola;
+					}
+
+					if (5 < (int)Mathf.Abs (selected.GetComponent<Condannati> ().crowdScoreMod) && (int)Mathf.Abs (selected.GetComponent<Condannati> ().crowdScoreMod) < 11) {
+
+						crowdSphere.rectTransform.sizeDelta = media;
+					}
+					if (10 < (int)Mathf.Abs (selected.GetComponent<Condannati> ().crowdScoreMod) && (int)Mathf.Abs (selected.GetComponent<Condannati> ().crowdScoreMod) < 16 ) {
+
+						crowdSphere.rectTransform.sizeDelta = grande;
+					}
+
+					if ((int)Mathf.Abs (selected.GetComponent<Condannati> ().kingScoreMod) < 6) {
+
+						kingSphere.rectTransform.sizeDelta = piccola;
+					}
+
+					if (5 < (int)Mathf.Abs(selected.GetComponent<Condannati> ().kingScoreMod) && (int)Mathf.Abs(selected.GetComponent<Condannati> ().kingScoreMod) < 11) {
+
+						kingSphere.rectTransform.sizeDelta = media;
+					}
+					if (10 < (int)Mathf.Abs (selected.GetComponent<Condannati> ().kingScoreMod) && (int)Mathf.Abs(selected.GetComponent<Condannati> ().kingScoreMod) < 16 ) {
+
+						kingSphere.rectTransform.sizeDelta = grande;
+					}
                 }
+
                 else if (hit.transform.name == "Ceppo" && selected != null)
+					
                 {
 
                     victim = selected;
@@ -138,6 +176,8 @@ public class InputManager : MonoBehaviour
 					nome.text = "";
 					crimine.text = "";
 					circostanza.text = "";
+					kingSphere.rectTransform.sizeDelta = new Vector2 (0, 0);
+					crowdSphere.rectTransform.sizeDelta = new Vector2 (0, 0);
                 }
 
             }

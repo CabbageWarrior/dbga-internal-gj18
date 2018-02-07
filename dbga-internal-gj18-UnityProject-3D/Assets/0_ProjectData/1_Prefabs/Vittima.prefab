@@ -326,9 +326,7 @@ GameObject:
   - component: {fileID: 4885253290814664}
   - component: {fileID: 114815371224259516}
   - component: {fileID: 136765979782553854}
-  - component: {fileID: 114684338135320756}
   - component: {fileID: 136197556295838398}
-  - component: {fileID: 114855911813094594}
   m_Layer: 0
   m_Name: Vittima
   m_TagString: Untagged
@@ -875,24 +873,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 966c37016f1189046bccc0e420aee852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114684338135320756
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1627826771714300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0205f15710c1b5840b5878d706b6f1aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crowdScoreMod: 20
-  kingScoreMod: -10
-  rank: 0
-  Nome: Giacomo
-  crimine: Crimine
-  circostanza: Circostanza
-  description: Descrizione nobile
 --- !u!114 &114815371224259516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -908,24 +888,6 @@ MonoBehaviour:
   baffiPrefab: {fileID: 0}
   capelliSpawnPoint: {fileID: 0}
   baffiSpawnPoint: {fileID: 0}
---- !u!114 &114855911813094594
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1627826771714300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0205f15710c1b5840b5878d706b6f1aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crowdScoreMod: 20
-  kingScoreMod: -10
-  rank: 1
-  Nome: Giovanni
-  crimine: Crimine1
-  circostanza: Circostanza1
-  description: Descrizione popolano
 --- !u!136 &136197556295838398
 CapsuleCollider:
   m_ObjectHideFlags: 1
