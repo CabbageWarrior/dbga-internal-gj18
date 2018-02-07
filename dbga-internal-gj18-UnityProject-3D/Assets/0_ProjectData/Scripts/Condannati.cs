@@ -103,4 +103,9 @@ public class Condannati : MonoBehaviour
         isAlive = false;
 
     }
+
+	public void ShotTesta()
+	{
+		GetComponent<Rigidbody> ().AddForce ((Camera.main.transform.position - transform.position).normalized * 4, ForceMode.Impulse);
+	}
 }
