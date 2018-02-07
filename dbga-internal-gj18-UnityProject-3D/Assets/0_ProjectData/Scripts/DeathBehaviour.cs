@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DeathBehaviour : StateMachineBehaviour {
+	bool hasSangue = false;
+	Condannati myCondannatiComponent;
 
 	 //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		
-		animator.GetComponentInParent<Condannati> ().sangue.SetActive (true);
+		myCondannatiComponent = animator.GetComponentInParent<Condannati> ();
+		hasSangue = myCondannatiComponent && myCondannatiComponent.sangue;
+
+		if (hasSangue) {
+			myCondannatiComponent.sangue.SetActive (true);
+		}
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -17,7 +23,9 @@ public class DeathBehaviour : StateMachineBehaviour {
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		animator.GetComponentInParent<Condannati> ().sangue.SetActive (false);
+		if (hasSangue) {
+			myCondannatiComponent.sangue.SetActive (false);
+		}
 	}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
