@@ -17,8 +17,8 @@ public class InputManager : MonoBehaviour
     private GameObject selected;
     private GameObject survivor;
 
-    private GameObject Condannato1;
-    private GameObject Condannato2;
+	public GameObject Condannato1;
+	public GameObject Condannato2;
 
     private Condannati condannati;
 
@@ -33,8 +33,8 @@ public class InputManager : MonoBehaviour
 	private Text circostanza;
    
 
-    private float currentCrowdScore = 0;
-    private float currentKingScore = 0;
+    private float currentCrowdScore = 50;
+    private float currentKingScore = 50;
     private int currentNobiliUccisi = 0;
     private int currentPopolaniUccisi = 0;
     private int currentSpecialiUccisi = 0;
@@ -86,7 +86,6 @@ public class InputManager : MonoBehaviour
 						nome.text = Condannato1.GetComponent<Condannati> ().Nome;
 						crimine.text = Condannato1.GetComponent<Condannati> ().crimine;
 						circostanza.text = Condannato1.GetComponent<Condannati> ().circostanza;
-
 					
                     }
                     else
@@ -134,32 +133,27 @@ public class InputManager : MonoBehaviour
                 else if (hit.transform.name == "Ceppo" && selected != null)
 					
                 {
+					survivor.GetComponent<Condannati> ().Survive ();
+					
+					victim = selected;
 
-                    victim = selected;
-                    Debug.Log(victim + " sgozzato");
+					Condannati victimCondamnedData = victim.GetComponent<Condannati> ();
 
-                    myAnimator = victim.GetComponentInChildren<Animator>();
-                    myAnimator.SetTrigger("Morto");
-                    myAnimator = survivor.GetComponentInChildren<Animator>();
-                    myAnimator.SetTrigger("Sopravvissuto");
+					victimCondamnedData.PrepareToDie ();
 
-                    currentCrowdScore += victim.GetComponent<Condannati>().crowdScoreMod;
-                    currentKingScore += victim.GetComponent<Condannati>().kingScoreMod;
+					currentCrowdScore += victimCondamnedData.crowdScoreMod;
+					currentKingScore += victimCondamnedData.kingScoreMod;
 
-                    
                     selected = null;
                     descriptionText.text = "";
 
-                    if (victim.GetComponent<Condannati>().rank == Condannati.Rank.NOBILE)
+					if (victimCondamnedData.rank == Condannati.Rank.NOBILE)
                     {
-
                         currentNobiliUccisi += 1;
                         nobiliUccisi.text = "Nobili : " + (currentNobiliUccisi);
-
                     }
-                    else if (victim.GetComponent<Condannati>().rank == Condannati.Rank.POPOLANO)
+					else if (victimCondamnedData.rank == Condannati.Rank.POPOLANO)
                     {
-
                         currentPopolaniUccisi += 1;
                         popolaniUccisi.text = "Popolani : " + (currentPopolaniUccisi);
                     }
