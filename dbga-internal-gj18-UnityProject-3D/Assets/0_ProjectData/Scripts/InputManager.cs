@@ -134,6 +134,8 @@ public class InputManager : MonoBehaviour
                 else if (hit.transform.name == "Ceppo" && selected != null)
 					
                 {
+
+
                     GM.checkState(GameManager.State.ENDTURN);
 					survivor.GetComponent<Condannati> ().Survive ();
 					
@@ -148,6 +150,8 @@ public class InputManager : MonoBehaviour
 
                     selected = null;
                     descriptionText.text = "";
+					kingSphere.rectTransform.sizeDelta = new Vector2 (0, 0);
+					crowdSphere.rectTransform.sizeDelta = new Vector2 (0, 0);
 
 					if (victimCondamnedData.rank == Condannati.Rank.NOBILE)
                     {
