@@ -158,6 +158,16 @@ public class InputManager : MonoBehaviour
                 else if (hit.transform.name == "Ceppo" && selected != null)
 
                 {
+					if (selected.GetComponent<Condannati> ().kingScoreMod > selected.GetComponent<Condannati> ().crowdScoreMod) {
+					
+						FindObjectOfType <AudioManager> ().Play ("NobiliSoddisfatti");
+
+					} else {
+					
+						FindObjectOfType <AudioManager> ().Play ("FollaSoddisfatta");
+					}
+
+
                     FindObjectOfType<AudioManager>().Stop("NobiliWaiting");
                     FindObjectOfType<AudioManager>().Play("BarFill");
 
@@ -201,8 +211,8 @@ public class InputManager : MonoBehaviour
                     //crimine.text = "";
                     //circostanza.text = "";
                     mypanel.SetActive(false);
-                    kingSphere.rectTransform.sizeDelta = new Vector2(0, 0);
-                    crowdSphere.rectTransform.sizeDelta = new Vector2(0, 0);
+                    //kingSphere.rectTransform.sizeDelta = new Vector2(0, 0);
+                    //crowdSphere.rectTransform.sizeDelta = new Vector2(0, 0);
                 }
 
             }
