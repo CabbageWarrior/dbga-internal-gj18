@@ -204,7 +204,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1939480223907584}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.405, y: -0.45, z: -1.34}
+  m_LocalPosition: {x: -0.406, y: -0.45, z: -1.34}
   m_LocalScale: {x: 0.99, y: 3, z: 1.0000002}
   m_Children:
   - {fileID: 224496949326913790}
@@ -249,7 +249,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1921474154883602}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.488, y: -0.4500001, z: -1.3400003}
+  m_LocalPosition: {x: 0.487, y: -0.4500001, z: -1.3400003}
   m_LocalScale: {x: 0.42435575, y: 3.000001, z: 1.0000002}
   m_Children:
   - {fileID: 224571859479765880}
@@ -378,7 +378,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2ca06d8c143ae584da3cfe395eebf88c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -627,9 +627,9 @@ MonoBehaviour:
   Condannato1: {fileID: 0}
   Condannato2: {fileID: 0}
   mypanel: {fileID: 0}
-  currentCrowdScore: 50
+  currentCrowdScore: 60
   currentKingScore: 50
-  currentNobiliUccisi: 0
+  currentNobiliUccisi: 1
   currentPopolaniUccisi: 0
 --- !u!114 &114840836397106730
 MonoBehaviour:
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1293244373437120}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
   m_Name: 
@@ -766,7 +766,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1761722465068686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.025}
   m_LocalScale: {x: 1.417225, y: 1.4237089, z: 1}
   m_Children: []
   m_Father: {fileID: 224571859479765880}
@@ -774,8 +774,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.097, y: -0.125}
-  m_SizeDelta: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.146, y: -0.125}
+  m_SizeDelta: {x: 1, y: 2.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224496949326913790
 RectTransform:
@@ -803,7 +803,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1563503914351788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.025000038}
   m_LocalScale: {x: 1.417225, y: 1.4237089, z: 1}
   m_Children: []
   m_Father: {fileID: 224496949326913790}
@@ -812,7 +812,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.182, y: -0.125}
-  m_SizeDelta: {x: 1, y: 1}
+  m_SizeDelta: {x: 1, y: 2.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224571859479765880
 RectTransform:
