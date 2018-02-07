@@ -13,6 +13,10 @@ public class Condannati : MonoBehaviour
     public Rank rank;
 
 	public string name;
+
+    public string crimine;
+    public string circostanza;
+
 	[TextArea(1,5)]
 	public string description;
     
