@@ -237,6 +237,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1525673068542146
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4613094061146770}
+  m_Layer: 0
+  m_Name: CapelliSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1533656698222940
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4654151345270400}
+  m_Layer: 0
+  m_Name: BaffiSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1552941806864630
 GameObject:
   m_ObjectHideFlags: 1
@@ -517,7 +547,8 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.6533829, z: 0.09667544}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4613094061146770}
   m_Father: {fileID: 4520996506038924}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -658,6 +689,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4222870566710828}
+  - {fileID: 4654151345270400}
   m_Father: {fileID: 4715946694904676}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -687,6 +719,19 @@ Transform:
   m_Children:
   - {fileID: 4230221280092480}
   m_Father: {fileID: 4645096688762780}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4613094061146770
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1525673068542146}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4222870566710828}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4629813664649504
@@ -744,6 +789,19 @@ Transform:
   m_Father: {fileID: 4177682315852598}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4654151345270400
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1533656698222940}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4520996506038924}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4715946694904676
 Transform:
   m_ObjectHideFlags: 1
@@ -795,7 +853,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1627826771714300}
   m_LocalRotation: {x: -0, y: 0.9014841, z: -0, w: 0.43281227}
-  m_LocalPosition: {x: 1.205, y: 1.09, z: -2.31}
+  m_LocalPosition: {x: -1.14, y: 1.09, z: -1.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4189459525927250}
@@ -893,21 +951,24 @@ MonoBehaviour:
   description: Descrizione Popolano
   possibleMatches: []
   defaultTransform: {fileID: 0}
+  deathPosition: {fileID: 0}
+  walkSpeed: 0.5
+  proximityTolerance: 0.1
 --- !u!114 &114815371224259516
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1627826771714300}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac33ddd66e280934082f2495c53b97f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   capelliPrefab: {fileID: 0}
   baffiPrefab: {fileID: 0}
-  capelliSpawnPoint: {fileID: 0}
-  baffiSpawnPoint: {fileID: 0}
+  capelliSpawnPoint: {fileID: 1525673068542146}
+  baffiSpawnPoint: {fileID: 1533656698222940}
 --- !u!136 &136558717973679656
 CapsuleCollider:
   m_ObjectHideFlags: 1

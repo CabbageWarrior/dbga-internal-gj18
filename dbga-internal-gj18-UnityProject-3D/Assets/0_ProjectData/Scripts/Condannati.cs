@@ -68,16 +68,15 @@ public class Condannati : MonoBehaviour
 	IEnumerator PrepareToDie_Coroutine()
 	{
 		animator.SetTrigger("Morente");
+		yield return null;
 
-		Vector3 targetDir = transform.position-deathPosition.transform.position;
-		float angle = Vector3.Angle(targetDir, transform.forward);
+		transform.DOLookAt( deathPosition.transform.position, walkSpeed, AxisConstraint.Y);
 
-		transform.DOLocalRotate( deathPosition.transform.position, walkSpeed, RotateMode.Fast);
 		yield return new WaitForSeconds (walkSpeed);
 
 		while(Mathf.Abs((transform.position - deathPosition.transform.position).sqrMagnitude) > proximityTolerance * proximityTolerance)
 		{
-			Debug.Log (Mathf.Abs ((transform.position - deathPosition.transform.position).sqrMagnitude));
+			//Debug.Log (Mathf.Abs ((transform.position - deathPosition.transform.position).sqrMagnitude));
 			transform.position += (deathPosition.transform.position - transform.position).normalized * walkSpeed * Time.deltaTime;
 			yield return null;
 		}
