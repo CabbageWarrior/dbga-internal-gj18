@@ -11,7 +11,7 @@ public class Condannati : MonoBehaviour
 	public float kingScoreMod = -10;
 
     public Rank rank;
-
+    bool isAlive = true;
 	public string name;
 
     public string crimine;
@@ -20,6 +20,8 @@ public class Condannati : MonoBehaviour
 	[TextArea(1,5)]
 	public string description;
     
+
+    public GameObject[] possibleMatches;
 
 
 	void Start () {
