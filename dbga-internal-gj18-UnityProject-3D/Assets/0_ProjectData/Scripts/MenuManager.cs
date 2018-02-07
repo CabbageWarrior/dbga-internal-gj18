@@ -20,13 +20,18 @@ public class MenuManager : MonoBehaviour
 
     public void Pause()
     {
+		
         if (!paused)
         {
+			FindObjectOfType < AudioManager> ().Stop ("MainTheme");
+			FindObjectOfType<AudioManager> ().Play ("NobiliWaiting");
             paused = true;
             Time.timeScale = 0;
         }
         else if (paused)
         {
+			FindObjectOfType < AudioManager> ().Play ("MainTheme");
+
             paused = false;
             Time.timeScale = 1;
         }
@@ -35,6 +40,7 @@ public class MenuManager : MonoBehaviour
 
     public void NewGame()
     {
+		
         SceneManager.LoadScene(1);
 		FindObjectOfType<AudioManager> ().Stop ("Victory");
 		FindObjectOfType<AudioManager> ().Stop ("GameOver");
@@ -47,6 +53,7 @@ public class MenuManager : MonoBehaviour
 
     public void BackToMenu()
     {
+		
         SceneManager.LoadScene(0);
 		FindObjectOfType<AudioManager> ().Stop ("Victory");
 		FindObjectOfType<AudioManager> ().Stop ("GameOver");
