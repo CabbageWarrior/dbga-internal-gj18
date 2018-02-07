@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44192788, g: 0.49088204, b: 0.5708344, a: 1}
+  m_IndirectSpecularColor: {r: 0.44192812, g: 0.49088275, b: 0.5708355, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1344,6 +1344,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 42
       objectReference: {fileID: 0}
+    - target: {fileID: 114801797526979152, guid: e2db1c6bf5dc2d944963b237b72abace,
+        type: 2}
+      propertyPath: mypanel
+      value: 
+      objectReference: {fileID: 89044349}
     - target: {fileID: 114292332620706602, guid: e2db1c6bf5dc2d944963b237b72abace,
         type: 2}
       propertyPath: Vittime.Array.data[0]
@@ -1539,49 +1544,7 @@ Prefab:
       propertyPath: MM
       value: 
       objectReference: {fileID: 1350994116}
-    - target: {fileID: 114801797526979152, guid: e2db1c6bf5dc2d944963b237b72abace,
-        type: 2}
-      propertyPath: mypanel
-      value: 
-      objectReference: {fileID: 89044349}
-    - target: {fileID: 114292332620706602, guid: e2db1c6bf5dc2d944963b237b72abace,
-        type: 2}
-      propertyPath: currentState
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114801797526979152, guid: e2db1c6bf5dc2d944963b237b72abace,
-        type: 2}
-      propertyPath: Condannato1
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114801797526979152, guid: e2db1c6bf5dc2d944963b237b72abace,
-        type: 2}
-      propertyPath: Condannato2
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114801797526979152, guid: e2db1c6bf5dc2d944963b237b72abace,
-        type: 2}
-      propertyPath: currentCrowdScore
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114801797526979152, guid: e2db1c6bf5dc2d944963b237b72abace,
-        type: 2}
-      propertyPath: currentKingScore
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114801797526979152, guid: e2db1c6bf5dc2d944963b237b72abace,
-        type: 2}
-      propertyPath: currentNobiliUccisi
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114801797526979152, guid: e2db1c6bf5dc2d944963b237b72abace,
-        type: 2}
-      propertyPath: currentPopolaniUccisi
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 33013933256938588, guid: e2db1c6bf5dc2d944963b237b72abace, type: 2}
-    - {fileID: 33444787341650550, guid: e2db1c6bf5dc2d944963b237b72abace, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2db1c6bf5dc2d944963b237b72abace, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &169330573
