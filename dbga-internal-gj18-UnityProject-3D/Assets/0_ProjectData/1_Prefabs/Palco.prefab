@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33170405557072314}
   - component: {fileID: 136801698851119778}
   - component: {fileID: 23686724159272668}
+  - component: {fileID: 114496532755826182}
   m_Layer: 0
   m_Name: Ceppo
   m_TagString: Untagged
@@ -37,7 +38,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4906677391597798}
-  - component: {fileID: 33444787341650550}
   - component: {fileID: 64959541274724492}
   - component: {fileID: 23614466630972690}
   m_Layer: 0
@@ -106,7 +106,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4313103013747494}
-  - component: {fileID: 33013933256938588}
   - component: {fileID: 64671800060679916}
   - component: {fileID: 23720884724474712}
   - component: {fileID: 95345105764146244}
@@ -152,7 +151,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1984198143337810}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1, z: -1}
+  m_LocalPosition: {x: 0, y: 1, z: -1.62}
   m_LocalScale: {x: 10, y: 4, z: 1}
   m_Children:
   - {fileID: 4906677391597798}
@@ -362,13 +361,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33013933256938588
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1984198143337810}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33170405557072314
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -376,13 +368,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1293244373437120}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &33444787341650550
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1460298700820954}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33447792574762634
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -522,6 +507,21 @@ MonoBehaviour:
   spawnPoint1: {fileID: 0}
   spawnPoint2: {fileID: 0}
   MM: {fileID: 0}
+--- !u!114 &114496532755826182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293244373437120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114801797526979152
 MonoBehaviour:
   m_ObjectHideFlags: 1
