@@ -15,7 +15,11 @@ public class DeathBehaviour : StateMachineBehaviour {
 			myCondannatiComponent.sangue.SetActive (true);
 		}
 
-		animator.transform.Find ("Sphere001").gameObject.SetActive(false);
+		Transform head = animator.transform.Find ("Sphere001");
+
+		if (head) {
+			head.gameObject.SetActive (false);
+		}
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
