@@ -40,7 +40,7 @@ public class MenuManager : MonoBehaviour
 
     public void NewGame()
     {
-		
+		Time.timeScale = 1;
         SceneManager.LoadScene(1);
 		FindObjectOfType<AudioManager> ().Stop ("Victory");
 		FindObjectOfType<AudioManager> ().Stop ("GameOver");
