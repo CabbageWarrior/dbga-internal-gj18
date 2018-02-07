@@ -77,7 +77,7 @@ public class InputManager : MonoBehaviour
         {
             ceppo.enabled = false;
         }
-        
+
 
         crowdScore.rectTransform.sizeDelta = new Vector2(40, currentCrowdScore * 2);
         kingScore.rectTransform.sizeDelta = new Vector2(40, currentKingScore * 2);
@@ -158,14 +158,17 @@ public class InputManager : MonoBehaviour
                 else if (hit.transform.name == "Ceppo" && selected != null)
 
                 {
-					if (selected.GetComponent<Condannati> ().kingScoreMod > selected.GetComponent<Condannati> ().crowdScoreMod) {
-					
-						FindObjectOfType <AudioManager> ().Play ("NobiliSoddisfatti");
+                    if (selected.GetComponent<Condannati>().kingScoreMod > selected.GetComponent<Condannati>().crowdScoreMod)
+                    {
 
-					} else {
-					
-						FindObjectOfType <AudioManager> ().Play ("FollaSoddisfatta");
-					}
+                        FindObjectOfType<AudioManager>().Play("NobiliSoddisfatti");
+
+                    }
+                    else
+                    {
+
+                        FindObjectOfType<AudioManager>().Play("FollaSoddisfatta");
+                    }
 
 
                     FindObjectOfType<AudioManager>().Stop("NobiliWaiting");
@@ -190,12 +193,12 @@ public class InputManager : MonoBehaviour
                     if (victimCondamnedData.rank == Condannati.Rank.NOBILE)
                     {
                         currentNobiliUccisi += 1;
-                        nobiliUccisi.text = "Nobili : " + (currentNobiliUccisi);
+                        nobiliUccisi.text = (currentNobiliUccisi) + " :";
                     }
                     else if (victimCondamnedData.rank == Condannati.Rank.POPOLANO)
                     {
                         currentPopolaniUccisi += 1;
-                        popolaniUccisi.text = "Popolani : " + (currentPopolaniUccisi);
+                        popolaniUccisi.text = ": " + (currentPopolaniUccisi);
                     }
 
                 }
