@@ -2447,6 +2447,16 @@ Prefab:
       propertyPath: MM
       value: 
       objectReference: {fileID: 126541334}
+    - target: {fileID: 114801797526979152, guid: e2db1c6bf5dc2d944963b237b72abace,
+        type: 2}
+      propertyPath: currentKingScore
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114801797526979152, guid: e2db1c6bf5dc2d944963b237b72abace,
+        type: 2}
+      propertyPath: currentNobiliUccisi
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2db1c6bf5dc2d944963b237b72abace, type: 2}
   m_IsPrefabParent: 0
@@ -5531,26 +5541,6 @@ Prefab:
       propertyPath: deathPosition
       value: 
       objectReference: {fileID: 1598920596}
-    - target: {fileID: 114388818177298628, guid: 313ea8e5e8511ec40b54b81e6c4458f7,
-        type: 2}
-      propertyPath: defaultTransform.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114388818177298628, guid: 313ea8e5e8511ec40b54b81e6c4458f7,
-        type: 2}
-      propertyPath: defaultTransform.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114388818177298628, guid: 313ea8e5e8511ec40b54b81e6c4458f7,
-        type: 2}
-      propertyPath: defaultTransform.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114388818177298628, guid: 313ea8e5e8511ec40b54b81e6c4458f7,
-        type: 2}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 65636132677974742, guid: 313ea8e5e8511ec40b54b81e6c4458f7,
         type: 2}
       propertyPath: m_Size.x
@@ -5836,6 +5826,26 @@ Prefab:
         type: 2}
       propertyPath: m_Center.z
       value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 114388818177298628, guid: 32d85ba15c14ff049bad36828865a610,
+        type: 2}
+      propertyPath: defaultTransform.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114388818177298628, guid: 32d85ba15c14ff049bad36828865a610,
+        type: 2}
+      propertyPath: defaultTransform.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114388818177298628, guid: 32d85ba15c14ff049bad36828865a610,
+        type: 2}
+      propertyPath: defaultTransform.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114388818177298628, guid: 32d85ba15c14ff049bad36828865a610,
+        type: 2}
+      propertyPath: animator
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32d85ba15c14ff049bad36828865a610, type: 2}
@@ -6742,7 +6752,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4493268063412228, guid: 664d3d7d8c9b48f4ca60f075389ad8a1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.767
+      value: 2.151
       objectReference: {fileID: 0}
     - target: {fileID: 4493268063412228, guid: 664d3d7d8c9b48f4ca60f075389ad8a1, type: 2}
       propertyPath: m_LocalPosition.y
@@ -6750,7 +6760,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4493268063412228, guid: 664d3d7d8c9b48f4ca60f075389ad8a1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.813
+      value: -2.042
       objectReference: {fileID: 0}
     - target: {fileID: 4493268063412228, guid: 664d3d7d8c9b48f4ca60f075389ad8a1, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6771,6 +6781,11 @@ Prefab:
     - target: {fileID: 4493268063412228, guid: 664d3d7d8c9b48f4ca60f075389ad8a1, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 95679146743974210, guid: 664d3d7d8c9b48f4ca60f075389ad8a1,
+        type: 2}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 664d3d7d8c9b48f4ca60f075389ad8a1, type: 2}
@@ -7047,6 +7062,26 @@ Prefab:
         type: 2}
       propertyPath: m_Center.z
       value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 114388818177298628, guid: fcf6f5f9b9d57754cafed7c8632f5c33,
+        type: 2}
+      propertyPath: defaultTransform.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114388818177298628, guid: fcf6f5f9b9d57754cafed7c8632f5c33,
+        type: 2}
+      propertyPath: defaultTransform.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114388818177298628, guid: fcf6f5f9b9d57754cafed7c8632f5c33,
+        type: 2}
+      propertyPath: defaultTransform.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114388818177298628, guid: fcf6f5f9b9d57754cafed7c8632f5c33,
+        type: 2}
+      propertyPath: animator
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fcf6f5f9b9d57754cafed7c8632f5c33, type: 2}
@@ -9767,31 +9802,6 @@ Prefab:
       propertyPath: deathPosition
       value: 
       objectReference: {fileID: 1598920596}
-    - target: {fileID: 114388818177298628, guid: 98f882c59c742fa4ea7c60e96322dbaa,
-        type: 2}
-      propertyPath: defaultTransform.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114388818177298628, guid: 98f882c59c742fa4ea7c60e96322dbaa,
-        type: 2}
-      propertyPath: defaultTransform.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114388818177298628, guid: 98f882c59c742fa4ea7c60e96322dbaa,
-        type: 2}
-      propertyPath: defaultTransform.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114388818177298628, guid: 98f882c59c742fa4ea7c60e96322dbaa,
-        type: 2}
-      propertyPath: isAlive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114388818177298628, guid: 98f882c59c742fa4ea7c60e96322dbaa,
-        type: 2}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 65636132677974742, guid: 98f882c59c742fa4ea7c60e96322dbaa,
         type: 2}
       propertyPath: m_Size.x
