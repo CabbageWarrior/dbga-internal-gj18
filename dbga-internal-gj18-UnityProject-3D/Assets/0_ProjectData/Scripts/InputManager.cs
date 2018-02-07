@@ -21,7 +21,9 @@ public class InputManager : MonoBehaviour
     private Text descriptionText;
     private Text nobiliUccisi;
     private Text popolaniUccisi;
-
+	private Text nome;
+	private Text crimine;
+	private Text circostanza;
    
 
     private float currentCrowdScore = 0;
@@ -41,6 +43,9 @@ public class InputManager : MonoBehaviour
         descriptionText = GameObject.Find("Description").GetComponent<Text>();
         nobiliUccisi = GameObject.Find("Nobili").GetComponent<Text>();
         popolaniUccisi = GameObject.Find("Popolani").GetComponent<Text>();
+		nome = GameObject.Find ("Nome").GetComponent<Text> ();
+		crimine = GameObject.Find ("Crimine").GetComponent<Text> ();
+		circostanza = GameObject.Find ("Circostanza").GetComponent<Text> ();
 
 
     }
@@ -67,8 +72,12 @@ public class InputManager : MonoBehaviour
 
                         Debug.Log("This is a Human1");
                         selected = Condannato1;
+						Debug.Log (selected.name);
                         survivor = Condannato2;
                         descriptionText.text = selected.GetComponent<Condannati>().description;
+						nome.text = Condannato1.GetComponent<Condannati> ().Nome;
+						crimine.text = Condannato1.GetComponent<Condannati> ().crimine;
+						circostanza.text = Condannato1.GetComponent<Condannati> ().circostanza;
 
                     }
                     else
@@ -76,8 +85,12 @@ public class InputManager : MonoBehaviour
 
                         Debug.Log("This is a Human");
                         selected = Condannato2;
+						Debug.Log (selected.name);
                         survivor = Condannato1;
                         descriptionText.text = selected.GetComponent<Condannati>().description;
+						nome.text = Condannato2.GetComponent<Condannati> ().Nome;
+						crimine.text = Condannato2.GetComponent<Condannati> ().crimine;
+						circostanza.text = Condannato2.GetComponent<Condannati> ().circostanza;
                     }
 
                 }
@@ -122,6 +135,9 @@ public class InputManager : MonoBehaviour
                     survivor = null;
                     Debug.Log("This isn't a Player");
                     descriptionText.text = "";
+					nome.text = "";
+					crimine.text = "";
+					circostanza.text = "";
                 }
 
             }
