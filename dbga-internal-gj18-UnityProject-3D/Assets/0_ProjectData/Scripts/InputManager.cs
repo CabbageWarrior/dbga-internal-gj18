@@ -31,8 +31,8 @@ public class InputManager : MonoBehaviour
 	private Text nome;
 	private Text crimine;
 	private Text circostanza;
-   
 
+    GameManager GM;
     private float currentCrowdScore = 50;
     private float currentKingScore = 50;
     private int currentNobiliUccisi = 0;
@@ -43,8 +43,9 @@ public class InputManager : MonoBehaviour
 
     void Start()
     {
-        Condannato1 = GameObject.Find("Vittima");
-        Condannato2 = GameObject.Find("Vittima1");
+        //Condannato1 = GameObject.Find("Vittima");
+        //Condannato2 = GameObject.Find("Vittima1");
+        GM = FindObjectOfType<GameManager>();
         crowdScore = GameObject.Find("PunteggioAttualePopolo").GetComponent<Image>();
         kingScore = GameObject.Find("PunteggioAttualeRe").GetComponent<Image>();
         descriptionText = GameObject.Find("Description").GetComponent<Text>();
@@ -64,7 +65,7 @@ public class InputManager : MonoBehaviour
         crowdScore.rectTransform.sizeDelta = new Vector2(40, currentCrowdScore * 2);
         kingScore.rectTransform.sizeDelta = new Vector2(40, currentKingScore * 2);
         
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && GM.currentState == GameManager.State.GIOCO)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;

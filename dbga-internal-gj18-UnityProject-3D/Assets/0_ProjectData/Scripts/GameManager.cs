@@ -6,20 +6,28 @@ public class GameManager : MonoBehaviour
 {
 
     public GameObject[] Vittime;
-    public enum State { GIOCO, RESPAWN, INTERMEZZO }
+    public enum State { GIOCO, RESPAWN, INTERMEZZO, ENDTURN }
 
     public State currentState;
-    bool isClosed;
-    public Animator palco;
+    bool isClosed = true;
+    Animator palco;
+    InputManager inputManager;
+    public Transform spawnPoint1;
+    public Transform spawnPoint2;
+
+    private Condannati vittima1;
+    private Condannati vittima2;
 
     private void Awake()
     {
-        Application.targetFrameRate = 30;
+        Application.targetFrameRate = -1;
     }
 
     void Start()
     {
-        currentState = 0;
+        inputManager = this.GetComponent<InputManager>();
+        palco = this.GetComponent<Animator>();
+        checkState(State.RESPAWN);
     }
 
 
@@ -30,6 +38,10 @@ public class GameManager : MonoBehaviour
         {
             currentState = State.GIOCO;
         }
+        else if (newState == State.ENDTURN && currentState != State.ENDTURN)
+        {
+            currentState = State.ENDTURN;
+        }
         else if (newState == State.INTERMEZZO && currentState != State.INTERMEZZO)
         {
             currentState = State.INTERMEZZO;
@@ -37,8 +49,9 @@ public class GameManager : MonoBehaviour
         }
         else if (newState == State.RESPAWN && currentState != State.RESPAWN)
         {
+            StartCoroutine(resetPosition());
             currentState = State.RESPAWN;
-            moveSipario();
+            StartCoroutine(spawnPuppotto());
         }
     }
 
@@ -54,8 +67,35 @@ public class GameManager : MonoBehaviour
         {
             isClosed = false;
             palco.SetBool("close", false);
-           // checkState(State.GIOCO);
+            // checkState(State.GIOCO);
         }
+    }
+
+    IEnumerator spawnPuppotto()
+    {
+        vittima1 = Vittime[Random.Range(0, Vittime.Length)].GetComponent<Condannati>();
+        vittima1.transform.position = spawnPoint1.position;
+        vittima1.gameObject.SetActive(true);
+        inputManager.Condannato1 = vittima1.gameObject;
+        vittima2 = vittima1.possibleMatches[Random.Range(0, vittima1.possibleMatches.Length)].GetComponent<Condannati>();
+        vittima2.transform.position = spawnPoint2.position;
+        vittima2.gameObject.SetActive(true);
+        inputManager.Condannato2 = vittima2.gameObject;
+        moveSipario();
+        yield return null;
+    }
+
+    IEnumerator resetPosition()
+    {
+        if (vittima1 != null && vittima2 != null)
+        {
+            
+            vittima1.animator.SetTrigger("Reset");
+            vittima2.animator.SetTrigger("Reset");
+            vittima2.gameObject.SetActive(false);
+            vittima1.gameObject.SetActive(false);
+        }
+        yield return null;
     }
 
 }
