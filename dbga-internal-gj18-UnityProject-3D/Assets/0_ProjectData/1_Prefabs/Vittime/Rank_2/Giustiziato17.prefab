@@ -544,7 +544,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1884272705705610}
   m_LocalRotation: {x: -0, y: 0.9014841, z: -0, w: 0.43281227}
-  m_LocalPosition: {x: -1.14, y: 0.9999999, z: -0.95}
+  m_LocalPosition: {x: -1.7154069, y: 2.465863, z: -2.6991363}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4606652077178980}
@@ -856,7 +856,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.83650696, y: 2.0825672, z: 0.33034024}
-  m_Center: {x: -0.08174641, y: 0.5412837, z: -0.33483046}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!95 &95416056901723482
 Animator:
   serializedVersion: 3
@@ -885,6 +885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0205f15710c1b5840b5878d706b6f1aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sangue: {fileID: 0}
   crowdScoreMod: 5
   kingScoreMod: -10
   rank: 0
@@ -927,6 +928,10 @@ MonoBehaviour:
   - {fileID: 1884272705705610, guid: a7e1fa2bb05a6f94eae198d984426049, type: 2}
   - {fileID: 1884272705705610, guid: e92fc79583954074fb6e7da66b0d1587, type: 2}
   - {fileID: 1884272705705610, guid: 861db620b26a3ef46b146ec9f90f9ca8, type: 2}
+  defaultTransform: {fileID: 0}
+  deathPosition: {fileID: 0}
+  walkSpeed: 0.5
+  proximityTolerance: 0.1
 --- !u!114 &114438377877438198
 MonoBehaviour:
   m_ObjectHideFlags: 1

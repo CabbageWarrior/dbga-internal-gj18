@@ -15,14 +15,14 @@ public class CondannatoSkin : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        if (capelliSpawnPoint.transform.childCount == 0)
-        {
-            Instantiate(capelliPrefab, capelliSpawnPoint.transform);
-        }
-        if (baffiSpawnPoint.transform.childCount == 0)
-        {
-            Instantiate(baffiPrefab, baffiSpawnPoint.transform);
-        }
+        //if (capelliSpawnPoint.transform.childCount == 0)
+        //{
+        //    Instantiate(capelliPrefab, capelliSpawnPoint.transform);
+        //}
+        //if (baffiSpawnPoint.transform.childCount == 0)
+        //{
+        //    Instantiate(baffiPrefab, baffiSpawnPoint.transform);
+        //}
     }
 
     // Update is called once per frame
