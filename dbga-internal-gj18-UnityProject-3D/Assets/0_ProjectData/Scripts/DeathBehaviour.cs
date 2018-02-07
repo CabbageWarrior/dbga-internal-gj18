@@ -34,6 +34,8 @@ public class DeathBehaviour : StateMachineBehaviour {
 //			aaa.isKinematic = true;
 //			aaa.AddForce ((Camera.main.transform.position - newHead.transform.position).normalized * 4, ForceMode.Impulse);
 		}
+
+		animator.transform.GetComponentInChildren <OcchiEPelame>().gameObject.SetActive (false);
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
