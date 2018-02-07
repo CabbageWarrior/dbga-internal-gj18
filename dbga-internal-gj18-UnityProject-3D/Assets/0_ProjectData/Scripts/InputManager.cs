@@ -31,13 +31,13 @@ public class InputManager : MonoBehaviour
 	private Text nome;
 	private Text crimine;
 	private Text circostanza;
+	public GameObject mypanel;
 
     GameManager GM;
-    private float currentCrowdScore = 50;
-    private float currentKingScore = 50;
-    private int currentNobiliUccisi = 0;
-    private int currentPopolaniUccisi = 0;
-    private int currentSpecialiUccisi = 0;
+    public float currentCrowdScore = 50;
+    public float currentKingScore = 50;
+    public int currentNobiliUccisi = 0;
+    public int currentPopolaniUccisi = 0;
 
     private Animator myAnimator;
 
@@ -56,12 +56,15 @@ public class InputManager : MonoBehaviour
 		circostanza = GameObject.Find ("Circostanza").GetComponent<Text> ();
 		crowdSphere = GameObject.Find ("CrowdCircle").GetComponent<Image> ();
 		kingSphere = GameObject.Find ("KingCircle").GetComponent<Image> ();
+		mypanel.SetActive (false);
 
     }
 
     void Update()
     {
-
+		if (selected != null) {
+			mypanel.SetActive (true);
+		}
         crowdScore.rectTransform.sizeDelta = new Vector2(40, currentCrowdScore * 2);
         kingScore.rectTransform.sizeDelta = new Vector2(40, currentKingScore * 2);
         
@@ -78,7 +81,7 @@ public class InputManager : MonoBehaviour
 
                     if (hit.transform.gameObject == Condannato1)
                     {
-
+						
                         Debug.Log("This is a Human1");
                         selected = Condannato1;
 						Debug.Log (selected.name);
@@ -87,11 +90,12 @@ public class InputManager : MonoBehaviour
 						nome.text = Condannato1.GetComponent<Condannati> ().Nome;
 						crimine.text = Condannato1.GetComponent<Condannati> ().crimine;
 						circostanza.text = Condannato1.GetComponent<Condannati> ().circostanza;
+
 					
                     }
                     else
                     {
-
+						mypanel.SetActive (true);
                         Debug.Log("This is a Human");
                         selected = Condannato2;
 						Debug.Log (selected.name);
@@ -149,9 +153,8 @@ public class InputManager : MonoBehaviour
 					currentKingScore += victimCondamnedData.kingScoreMod;
 
                     selected = null;
-                    descriptionText.text = "";
-					kingSphere.rectTransform.sizeDelta = new Vector2 (0, 0);
-					crowdSphere.rectTransform.sizeDelta = new Vector2 (0, 0);
+					mypanel.SetActive (false);
+                    //descriptionText.text = "";
 
 					if (victimCondamnedData.rank == Condannati.Rank.NOBILE)
                     {
@@ -172,10 +175,11 @@ public class InputManager : MonoBehaviour
                     selected = null;
                     survivor = null;
                     Debug.Log("This isn't a Player");
-                    descriptionText.text = "";
-					nome.text = "";
-					crimine.text = "";
-					circostanza.text = "";
+                   // descriptionText.text = "";
+					//nome.text = "";
+					//crimine.text = "";
+					//circostanza.text = "";
+					mypanel.SetActive(false);
 					kingSphere.rectTransform.sizeDelta = new Vector2 (0, 0);
 					crowdSphere.rectTransform.sizeDelta = new Vector2 (0, 0);
                 }

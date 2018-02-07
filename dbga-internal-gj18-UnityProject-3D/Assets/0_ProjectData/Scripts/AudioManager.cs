@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour {
 
@@ -46,7 +47,29 @@ public class AudioManager : MonoBehaviour {
 
 	void Start(){
 
-		Play ("MainTheme");
+		Scene currentScene = SceneManager.GetActiveScene ();
+
+		string sceneName = currentScene.name;
+			
+		if (sceneName == "Menu") {
+			
+			Play ("MenuTheme");
+				
+		} else if (sceneName == "Main") {
+		
+			Play ("MainTheme");
+		}
+
+		 else if (sceneName == "GameOver") {
+
+			Play ("GameOver");
+		}
+
+		else if (sceneName == "Victory") {
+
+			Play ("Victory");
+		}
+
 	}
 
 	

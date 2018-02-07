@@ -182,6 +182,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 49043563}
+--- !u!1001 &56329841
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4476910778593340, guid: 39939acafec0fe244a0ed66a9076a53e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.83585024
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476910778593340, guid: 39939acafec0fe244a0ed66a9076a53e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.6750057
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476910778593340, guid: 39939acafec0fe244a0ed66a9076a53e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.0229616
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476910778593340, guid: 39939acafec0fe244a0ed66a9076a53e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476910778593340, guid: 39939acafec0fe244a0ed66a9076a53e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476910778593340, guid: 39939acafec0fe244a0ed66a9076a53e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476910778593340, guid: 39939acafec0fe244a0ed66a9076a53e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476910778593340, guid: 39939acafec0fe244a0ed66a9076a53e, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 39939acafec0fe244a0ed66a9076a53e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &77440790
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,6 +717,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 458801292}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &321292527
@@ -710,6 +763,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 321292524}
+--- !u!114 &458801292 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114400336974615552, guid: 39939acafec0fe244a0ed66a9076a53e,
+    type: 2}
+  m_PrefabInternal: {fileID: 56329841}
+  m_Script: {fileID: 11500000, guid: 7621d08f0020fa243a1cdef2331ada60, type: 3}
 --- !u!1 &485338408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,6 +1326,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 458801292}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1001694756
@@ -1694,6 +1764,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 458801292}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -2636,6 +2717,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 458801292}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
