@@ -59,7 +59,12 @@ public class MenuManager : MonoBehaviour
 		FindObjectOfType<AudioManager> ().Stop ("GameOver");
     }
 
-	void Update(){
+    private void Awake()
+    {
+        Application.targetFrameRate = -1;
+    }
+
+    void Update(){
 		
 		if (finaleBello && !triggered ) {
 			triggered = true;

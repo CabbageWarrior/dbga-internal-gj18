@@ -21,10 +21,7 @@ public class GameManager : MonoBehaviour
     private Condannati vittima2;
     private int actualTurn = 0;
 
-    private void Awake()
-    {
-        Application.targetFrameRate = -1;
-    }
+    
 
     void Start()
     {
