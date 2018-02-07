@@ -52,7 +52,7 @@ public class AudioManager : MonoBehaviour {
 
 		string sceneName = currentScene.name;
 			
-		if (sceneName == "Menu") {
+		if (sceneName == "Menuparaculo") {
 			
 			Play ("MenuTheme");
 				
