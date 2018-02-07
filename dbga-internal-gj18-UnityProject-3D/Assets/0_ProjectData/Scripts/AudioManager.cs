@@ -56,7 +56,7 @@ public class AudioManager : MonoBehaviour {
 			
 			Play ("MenuTheme");
 				
-		} else if (sceneName == "Main hud2") {
+		} else if (sceneName == "MainSceneFinale") {
 		
 			Play ("MainTheme");
 		}

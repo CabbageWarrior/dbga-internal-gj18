@@ -306,8 +306,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1798660588665070}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.83585024, y: 2.6750057, z: -2.0229616}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.83584976, y: 2.675006, z: -2.0229645}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4734804201177266}
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: SiparioClosed
   clip: {fileID: 8300000, guid: 9f9e14791630acb418a18f4872cf7856, type: 3}
-  volume: 0.734
+  volume: 0.404
   pitch: 1
   source: {fileID: 0}
   loop: 0
