@@ -8,13 +8,13 @@ public class AudioManager : MonoBehaviour {
 
 	public Sound[] sounds;
 
-	public static AudioManager instance;
+	//public static AudioManager instance;
 
 	void Awake () {
 
 
 
-		if (instance == null) {
+		/*if (instance == null) {
 			instance = this;
 		} 
 		else 
@@ -23,8 +23,9 @@ public class AudioManager : MonoBehaviour {
 			return;
 		
 		}
+		*/
 				
-		DontDestroyOnLoad (gameObject);
+		//DontDestroyOnLoad (gameObject);
 
 		sounds = new Sound[transform.childCount];
 
@@ -55,7 +56,7 @@ public class AudioManager : MonoBehaviour {
 			
 			Play ("MenuTheme");
 				
-		} else if (sceneName == "Main") {
+		} else if (sceneName == "Main hud2") {
 		
 			Play ("MainTheme");
 		}
@@ -78,5 +79,11 @@ public class AudioManager : MonoBehaviour {
 		Sound s = Array.Find (sounds, sound => sound.name == name);
 		s.source.Play ();
 
+		}
+
+		public void Stop(string name){
+	
+		Sound s = Array.Find(sounds,sound => sound.name == name);
+		s.source.Stop ();
 		}
 }

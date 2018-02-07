@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
     public bool finaleBello = false;
     public Canvas schermataFinale;
     bool paused = false;
+	bool triggered = false;
 
     public string[] finali;
 
@@ -35,6 +36,8 @@ public class MenuManager : MonoBehaviour
     public void NewGame()
     {
         SceneManager.LoadScene(1);
+		FindObjectOfType<AudioManager> ().Stop ("Victory");
+		FindObjectOfType<AudioManager> ().Stop ("GameOver");
     }
 
     public void Exit()
@@ -45,8 +48,22 @@ public class MenuManager : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene(0);
+		FindObjectOfType<AudioManager> ().Stop ("Victory");
+		FindObjectOfType<AudioManager> ().Stop ("GameOver");
     }
 
-
+	void Update(){
+		
+		if (finaleBello && !triggered ) {
+			triggered = true;
+			FindObjectOfType < AudioManager> ().Stop ("MainTheme");
+			FindObjectOfType<AudioManager> ().Play ("Victory");
+		}
+		if (!finaleBello && triggered) {
+			triggered = true;
+			FindObjectOfType < AudioManager> ().Stop ("MainTheme");
+			FindObjectOfType < AudioManager> ().Play ("GameOver");
+		}
+	}
 
 }

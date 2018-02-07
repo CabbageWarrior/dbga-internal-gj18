@@ -75,22 +75,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1317802189573362
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4040761116489076}
-  - component: {fileID: 114997198445053340}
-  m_Layer: 0
-  m_Name: SovranoArrabbiato
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1348498309461268
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,22 +102,6 @@ GameObject:
   - component: {fileID: 114816435281546292}
   m_Layer: 0
   m_Name: Drumroll
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1443687505016530
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4913286928445344}
-  - component: {fileID: 114911709276965100}
-  m_Layer: 0
-  m_Name: SovranoHappy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -328,19 +296,6 @@ Transform:
   m_Father: {fileID: 4476910778593340}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4040761116489076
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1317802189573362}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4476910778593340}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4041818273900812
 Transform:
   m_ObjectHideFlags: 1
@@ -432,8 +387,6 @@ Transform:
   - {fileID: 4503265009563116}
   - {fileID: 4687576938166088}
   - {fileID: 4689392540456506}
-  - {fileID: 4040761116489076}
-  - {fileID: 4913286928445344}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -541,19 +494,6 @@ Transform:
   m_Father: {fileID: 4476910778593340}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4913286928445344
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1443687505016530}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4476910778593340}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4940967479197686
 Transform:
   m_ObjectHideFlags: 1
@@ -594,7 +534,7 @@ MonoBehaviour:
   name: Pianto
   clip: {fileID: 8300000, guid: 4716cac85cfc42a4fb4987f0dcb245fb, type: 3}
   volume: 0.713
-  pitch: 2.12
+  pitch: 1
   source: {fileID: 0}
   loop: 0
 --- !u!114 &114289644714838814
@@ -611,7 +551,7 @@ MonoBehaviour:
   name: PopolaniContrari
   clip: {fileID: 8300000, guid: ffe2e72bed19db341ae9eef6885e9749, type: 3}
   volume: 0.713
-  pitch: 2.2
+  pitch: 1
   source: {fileID: 0}
   loop: 0
 --- !u!114 &114375078823359312
@@ -626,9 +566,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: NobiliWaiting
-  clip: {fileID: 8300000, guid: e79e481b6f022574f8eccf701adac4fb, type: 3}
-  volume: 0.799
-  pitch: 2.39
+  clip: {fileID: 8300000, guid: b425b233fb7bb3849a8aa478a3772583, type: 3}
+  volume: 1
+  pitch: 1
   source: {fileID: 0}
   loop: 1
 --- !u!114 &114400336974615552
@@ -657,7 +597,7 @@ MonoBehaviour:
   name: Victory
   clip: {fileID: 8300000, guid: cca5ced023385b44182a551d7221e572, type: 3}
   volume: 0.713
-  pitch: 2.17
+  pitch: 1
   source: {fileID: 0}
   loop: 0
 --- !u!114 &114443418409907056
@@ -674,7 +614,7 @@ MonoBehaviour:
   name: SiparioClosed
   clip: {fileID: 8300000, guid: 9f9e14791630acb418a18f4872cf7856, type: 3}
   volume: 0.734
-  pitch: 2.25
+  pitch: 1
   source: {fileID: 0}
   loop: 0
 --- !u!114 &114520924004870008
@@ -691,7 +631,7 @@ MonoBehaviour:
   name: MenuTheme
   clip: {fileID: 8300000, guid: fde306e114c75894ea00f20ef27ab1c7, type: 3}
   volume: 0.631
-  pitch: 1.95
+  pitch: 1
   source: {fileID: 0}
   loop: 1
 --- !u!114 &114528466967984294
@@ -708,7 +648,7 @@ MonoBehaviour:
   name: PopolaniWaiting
   clip: {fileID: 8300000, guid: 75a5eb9005bce554e80e85d6c76af097, type: 3}
   volume: 0.794
-  pitch: 2.39
+  pitch: 1
   source: {fileID: 0}
   loop: 1
 --- !u!114 &114553016924647744
@@ -724,8 +664,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: MainTheme
   clip: {fileID: 8300000, guid: 8f4bc57b45e11644e9b5d0a7c9c6bee5, type: 3}
-  volume: 0.61
-  pitch: 1.87
+  volume: 0.057
+  pitch: 1
   source: {fileID: 0}
   loop: 1
 --- !u!114 &114589169301719818
@@ -742,7 +682,7 @@ MonoBehaviour:
   name: AxeWoosh
   clip: {fileID: 8300000, guid: 79776d3318abec649ad1beec76c8c740, type: 3}
   volume: 0.621
-  pitch: 1.96
+  pitch: 1
   source: {fileID: 0}
   loop: 0
 --- !u!114 &114600428889092806
@@ -759,7 +699,7 @@ MonoBehaviour:
   name: Click
   clip: {fileID: 8300000, guid: 091b616ad45b80746a17a3a059282bed, type: 3}
   volume: 0.783
-  pitch: 2.29
+  pitch: 1
   source: {fileID: 0}
   loop: 0
 --- !u!114 &114621118983085384
@@ -776,7 +716,7 @@ MonoBehaviour:
   name: GameOver
   clip: {fileID: 8300000, guid: 15af0266b5f5a96498b8d8399eb02edb, type: 3}
   volume: 0.745
-  pitch: 2.36
+  pitch: 1
   source: {fileID: 0}
   loop: 1
 --- !u!114 &114647015485511348
@@ -791,9 +731,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: FollaSoddisfatta
-  clip: {fileID: 8300000, guid: bec15eeef9cc0a742b5e1e2c411d3574, type: 3}
+  clip: {fileID: 8300000, guid: e2679391eafbd1b4c879214d4dbff931, type: 3}
   volume: 0.762
-  pitch: 2.4
+  pitch: 1
   source: {fileID: 0}
   loop: 0
 --- !u!114 &114704579159144950
@@ -810,7 +750,7 @@ MonoBehaviour:
   name: NobiliContrari
   clip: {fileID: 8300000, guid: 77987b60baaf6ac4fafa2c6d35cc6dd2, type: 3}
   volume: 0.772
-  pitch: 2.32
+  pitch: 1
   source: {fileID: 0}
   loop: 1
 --- !u!114 &114796796482689784
@@ -825,9 +765,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: NobiliSoddisfatti
-  clip: {fileID: 8300000, guid: 54887c8e35d58054883da38a2caf68a4, type: 3}
+  clip: {fileID: 8300000, guid: 59fc4efcc65a0054ca83398243fdb3b7, type: 3}
   volume: 0.789
-  pitch: 2.39
+  pitch: 1
   source: {fileID: 0}
   loop: 0
 --- !u!114 &114816435281546292
@@ -843,10 +783,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: BarFill
   clip: {fileID: 8300000, guid: a5f277d12f6f54040b92e394e21acfb5, type: 3}
-  volume: 0.789
-  pitch: 2.34
+  volume: 1
+  pitch: 1
   source: {fileID: 0}
-  loop: 1
+  loop: 0
 --- !u!114 &114907924079795014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -861,40 +801,6 @@ MonoBehaviour:
   name: HeadRolling
   clip: {fileID: 8300000, guid: 30312a36d5a0d7940b98af09ca3e0c26, type: 3}
   volume: 0.762
-  pitch: 2.31
-  source: {fileID: 0}
-  loop: 0
---- !u!114 &114911709276965100
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1443687505016530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f224d42153dbb34689f5909eb132e60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: SovranoHappy
-  clip: {fileID: 8300000, guid: 8ca5faa156045ee4cb11bd47896b7d93, type: 3}
-  volume: 0.783
-  pitch: 2.42
-  source: {fileID: 0}
-  loop: 0
---- !u!114 &114997198445053340
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1317802189573362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f224d42153dbb34689f5909eb132e60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: SovranoAngry
-  clip: {fileID: 8300000, guid: fee0a9892370b6648905a9652c2f6793, type: 3}
-  volume: 0.762
-  pitch: 2.32
+  pitch: 1
   source: {fileID: 0}
   loop: 0

@@ -43,6 +43,7 @@ public class InputManager : MonoBehaviour
 
     void Start()
     {
+		FindObjectOfType<AudioManager> ().Play ("NobiliWaiting");
         //Condannato1 = GameObject.Find("Vittima");
         //Condannato2 = GameObject.Find("Vittima1");
         GM = FindObjectOfType<GameManager>();
@@ -56,6 +57,7 @@ public class InputManager : MonoBehaviour
 		circostanza = GameObject.Find ("Circostanza").GetComponent<Text> ();
 		crowdSphere = GameObject.Find ("CrowdCircle").GetComponent<Image> ();
 		kingSphere = GameObject.Find ("KingCircle").GetComponent<Image> ();
+		mypanel = GameObject.Find ("Panel");
 		mypanel.SetActive (false);
 
     }
@@ -65,6 +67,7 @@ public class InputManager : MonoBehaviour
 		if (selected != null) {
 			mypanel.SetActive (true);
 		}
+
         crowdScore.rectTransform.sizeDelta = new Vector2(40, currentCrowdScore * 2);
         kingScore.rectTransform.sizeDelta = new Vector2(40, currentKingScore * 2);
         
@@ -138,7 +141,8 @@ public class InputManager : MonoBehaviour
                 else if (hit.transform.name == "Ceppo" && selected != null)
 					
                 {
-
+					FindObjectOfType<AudioManager> ().Stop ("NobiliWaiting");
+					FindObjectOfType<AudioManager> ().Play ("BarFill");
 
                     GM.checkState(GameManager.State.ENDTURN);
 					survivor.GetComponent<Condannati> ().Survive ();

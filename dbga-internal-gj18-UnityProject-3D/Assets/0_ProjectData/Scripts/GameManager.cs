@@ -113,12 +113,15 @@ public class GameManager : MonoBehaviour
     {
         if (!isClosed)
         {
+			FindObjectOfType<AudioManager> ().Play ("SiparioClosed");
             isClosed = true;
             palco.SetBool("close", true);
             //checkState(State.RESPAWN);
         }
         else if (isClosed)
         {
+			FindObjectOfType<AudioManager> ().Play ("NobiliWaiting");
+			FindObjectOfType<AudioManager> ().Play ("SiparioClosed");
             isClosed = false;
             palco.SetBool("close", false);
             // checkState(State.GIOCO);
