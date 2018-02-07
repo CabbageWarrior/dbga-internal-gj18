@@ -12,7 +12,7 @@ public class Condannati : MonoBehaviour
 
     public Rank rank;
     bool isAlive = true;
-	public string name;
+	public string Nome;
 
     public string crimine;
     public string circostanza;
