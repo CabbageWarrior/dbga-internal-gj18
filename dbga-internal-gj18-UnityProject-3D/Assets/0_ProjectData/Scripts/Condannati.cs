@@ -20,15 +20,19 @@ public class Condannati : MonoBehaviour
 	[TextArea(1,5)]
 	public string description;
     
-
+    [Space(10)]
     public GameObject[] possibleMatches;
 
+    [HideInInspector]public Transform defaultTransform;
 
-	void Start () {
-		
+
+	void Start ()
+    {
+        defaultTransform = transform;
 	}
 
-	void Update () {
+	void Update ()
+    {
 		
 	}
 		
