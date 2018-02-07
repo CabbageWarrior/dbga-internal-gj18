@@ -211,8 +211,8 @@ public class InputManager : MonoBehaviour
                     //crimine.text = "";
                     //circostanza.text = "";
                     mypanel.SetActive(false);
-                    //kingSphere.rectTransform.sizeDelta = new Vector2(0, 0);
-                    //crowdSphere.rectTransform.sizeDelta = new Vector2(0, 0);
+                    kingSphere.rectTransform.sizeDelta = new Vector2(0, 0);
+                    crowdSphere.rectTransform.sizeDelta = new Vector2(0, 0);
                 }
 
             }
