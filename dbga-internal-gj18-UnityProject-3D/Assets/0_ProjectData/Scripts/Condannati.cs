@@ -6,6 +6,8 @@ using DG.Tweening;
 
 public class Condannati : MonoBehaviour
 { 
+	public GameObject sangue;
+
     public enum Rank { NOBILE, POPOLANO }
 
 	[Header("Scores")]
