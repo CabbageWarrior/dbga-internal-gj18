@@ -134,6 +134,7 @@ public class InputManager : MonoBehaviour
                 else if (hit.transform.name == "Ceppo" && selected != null)
 					
                 {
+                    GM.checkState(GameManager.State.ENDTURN);
 					survivor.GetComponent<Condannati> ().Survive ();
 					
 					victim = selected;

@@ -73,15 +73,38 @@ public class GameManager : MonoBehaviour
 
     IEnumerator spawnPuppotto()
     {
-        vittima1 = Vittime[Random.Range(0, Vittime.Length)].GetComponent<Condannati>();
-        vittima1.transform.position = spawnPoint1.position;
-        vittima1.gameObject.SetActive(true);
-        inputManager.Condannato1 = vittima1.gameObject;
-        vittima2 = vittima1.possibleMatches[Random.Range(0, vittima1.possibleMatches.Length)].GetComponent<Condannati>();
-        vittima2.transform.position = spawnPoint2.position;
-        vittima2.gameObject.SetActive(true);
-        inputManager.Condannato2 = vittima2.gameObject;
+        //vittima1 = Vittime[Random.Range(0, Vittime.Length)].GetComponent<Condannati>();
+        do
+        {
+            int random = Random.Range(0, Vittime.Length);
+            vittima1 = Vittime[random].GetComponent<Condannati>();
+        }
+        while (!vittima1.isAlive);
+        if (vittima1 != null)
+        {
+
+            vittima1.gameObject.SetActive(true);
+            vittima1.transform.position = spawnPoint1.position;
+            inputManager.Condannato1 = vittima1.gameObject;
+            //vittima2 = vittima1.possibleMatches[Random.Range(0, vittima1.possibleMatches.Length)].GetComponent<Condannati>();
+            do
+            {
+                int random = Random.Range(0, vittima1.possibleMatches.Length);
+                vittima2 = vittima1.possibleMatches[random].GetComponent<Condannati>();
+            }
+            while (!vittima2.isAlive);
+
+            if (vittima2 != null)
+            {
+                vittima2.gameObject.SetActive(true);
+                vittima2.transform.position = spawnPoint2.position;
+                inputManager.Condannato2 = vittima2.gameObject;
+            }
+        }
+
         moveSipario();
+
+
         yield return null;
     }
 
@@ -89,12 +112,14 @@ public class GameManager : MonoBehaviour
     {
         if (vittima1 != null && vittima2 != null)
         {
-            
+            vittima1.transform.position = vittima1.defaultTransform;
+            vittima2.transform.position = vittima2.defaultTransform;
             vittima1.animator.SetTrigger("Reset");
             vittima2.animator.SetTrigger("Reset");
             vittima2.gameObject.SetActive(false);
             vittima1.gameObject.SetActive(false);
         }
+
         yield return null;
     }
 

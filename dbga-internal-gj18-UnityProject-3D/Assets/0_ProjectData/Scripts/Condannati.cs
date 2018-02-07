@@ -28,7 +28,7 @@ public class Condannati : MonoBehaviour
     [Header("Possible Matches")]
     public GameObject[] possibleMatches;
 
-    [HideInInspector] public Transform defaultTransform;
+    [HideInInspector] public Vector3 defaultTransform;
 
     [Header("Positions")]
     public GameObject deathPosition;
@@ -36,12 +36,12 @@ public class Condannati : MonoBehaviour
     public float proximityTolerance = .1f;
     GameManager GM;
     // Private data
-    bool isAlive = true;
+    public bool isAlive = true;
     [HideInInspector] public Animator animator;
 
     private void Awake()
     {
-        defaultTransform = transform;
+        defaultTransform = transform.position;
         
     }
 
@@ -95,6 +95,9 @@ public class Condannati : MonoBehaviour
 
         yield return new WaitForSeconds(3);
         GM.checkState(GameManager.State.INTERMEZZO);
-        transform.position = defaultTransform.position;
+        //yield return new WaitForSeconds(0.5f);
+        //transform.position = defaultTransform;
+        isAlive = false;
+
     }
 }
