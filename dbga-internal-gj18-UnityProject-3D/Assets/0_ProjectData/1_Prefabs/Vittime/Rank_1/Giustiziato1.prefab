@@ -94,6 +94,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4947251067214456}
+  - component: {fileID: 114158464288329014}
   m_Layer: 0
   m_Name: OcchiEPelame_Pupo1
   m_TagString: Untagged
@@ -315,6 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4085034843993930}
   - component: {fileID: 137838741567807494}
+  - component: {fileID: 114216372250514134}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -376,6 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4458587608532502}
   - component: {fileID: 137580740633269804}
+  - component: {fileID: 114861351289178734}
   m_Layer: 0
   m_Name: Sphere001
   m_TagString: Untagged
@@ -1399,6 +1402,32 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114158464288329014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1053290220688690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31094d449f1a40145a31546166249d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114216372250514134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1450247812914596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 1
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114306004066061736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1471,6 +1500,21 @@ MonoBehaviour:
   proximityTolerance: 0.1
   isAlive: 1
   animator: {fileID: 0}
+--- !u!114 &114861351289178734
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1547883707193868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 1
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114932841654659836
 MonoBehaviour:
   m_ObjectHideFlags: 1

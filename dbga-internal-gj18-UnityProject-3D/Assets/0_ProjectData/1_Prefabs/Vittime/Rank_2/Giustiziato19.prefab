@@ -50,6 +50,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132625050459772}
   - component: {fileID: 137768480873319944}
+  - component: {fileID: 114257280734986730}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -222,6 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4672200301566672}
   - component: {fileID: 137423708117043114}
+  - component: {fileID: 114657367501918858}
   m_Layer: 0
   m_Name: Sphere001
   m_TagString: Untagged
@@ -1411,6 +1413,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 966c37016f1189046bccc0e420aee852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114257280734986730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1025986000204476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 1
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114388818177298628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1482,6 +1499,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31094d449f1a40145a31546166249d91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114657367501918858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1292589099929438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 1
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114932841654659836
 MonoBehaviour:
   m_ObjectHideFlags: 1

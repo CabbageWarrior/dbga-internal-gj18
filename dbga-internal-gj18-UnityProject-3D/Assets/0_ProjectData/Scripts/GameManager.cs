@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     private Condannati vittima2;
     private int actualTurn = 0;
 
-    
+
 
     void Start()
     {
@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
         }
         else if (newState == State.ENDTURN && currentState != State.ENDTURN)
         {
+            vittima2.gameObject.GetComponentInChildren<Outline>().enabled = false;
+            vittima1.gameObject.GetComponentInChildren<Outline>().enabled = false;
             currentState = State.ENDTURN;
             actualTurn++;
         }
@@ -82,7 +84,7 @@ public class GameManager : MonoBehaviour
                 MM.schermataFinale.gameObject.SetActive(true);
 
             }
-            else if (actualTurn == MM.turniMax && (inputManager.currentNobiliUccisi < inputManager.currentPopolaniUccisi + MM.margineDiVittoria 
+            else if (actualTurn == MM.turniMax && (inputManager.currentNobiliUccisi < inputManager.currentPopolaniUccisi + MM.margineDiVittoria
                     && inputManager.currentNobiliUccisi > inputManager.currentPopolaniUccisi - MM.margineDiVittoria))
             {
                 MM.finalText.text = MM.finali[5];
@@ -90,7 +92,7 @@ public class GameManager : MonoBehaviour
                 MM.schermataFinale.gameObject.SetActive(true);
 
             }
-            else if(actualTurn == MM.turniMax && inputManager.currentNobiliUccisi <= inputManager.currentPopolaniUccisi - MM.margineDiVittoria)
+            else if (actualTurn == MM.turniMax && inputManager.currentNobiliUccisi <= inputManager.currentPopolaniUccisi - MM.margineDiVittoria)
             {
                 MM.finalText.text = MM.finali[6];
                 MM.finaleBello = true;
@@ -109,21 +111,21 @@ public class GameManager : MonoBehaviour
 
     void moveSipario()
     {
-		if (!isClosed && !MM.schermataFinale.isActiveAndEnabled)
+        if (!isClosed && !MM.schermataFinale.isActiveAndEnabled)
         {
-			//Debug.Log ("Close TRUE");
+            //Debug.Log ("Close TRUE");
 
-			FindObjectOfType<AudioManager> ().Play ("SiparioClosed");
+            FindObjectOfType<AudioManager>().Play("SiparioClosed");
             isClosed = true;
             palco.SetBool("close", true);
             //checkState(State.RESPAWN);
         }
-		else if (isClosed && !MM.schermataFinale.isActiveAndEnabled)
-		{
-			//Debug.Log ("Close FALSE");
+        else if (isClosed && !MM.schermataFinale.isActiveAndEnabled)
+        {
+            //Debug.Log ("Close FALSE");
 
-			FindObjectOfType<AudioManager> ().Play ("NobiliWaiting");
-			FindObjectOfType<AudioManager> ().Play ("SiparioClosed");
+            FindObjectOfType<AudioManager>().Play("NobiliWaiting");
+            FindObjectOfType<AudioManager>().Play("SiparioClosed");
             isClosed = false;
             palco.SetBool("close", false);
             // checkState(State.GIOCO);
@@ -142,10 +144,11 @@ public class GameManager : MonoBehaviour
         if (vittima1 != null)
         {
             vittima1.gameObject.SetActive(true);
-            //vittima1.gameObject.GetComponentInChildren<Outline>().enabled = true;
+
+            vittima1.gameObject.GetComponentInChildren<Outline>().enabled = true;
             vittima1.transform.position = spawnPoint1.position;
             inputManager.Condannato1 = vittima1.gameObject;
-            //vittima2 = vittima1.possibleMatches[Random.Range(0, vittima1.possibleMatches.Length)].GetComponent<Condannati>();
+            vittima2 = vittima1.possibleMatches[Random.Range(0, vittima1.possibleMatches.Length)].GetComponent<Condannati>();
             do
             {
                 int random = Random.Range(0, vittima1.possibleMatches.Length);
@@ -155,7 +158,8 @@ public class GameManager : MonoBehaviour
 
             if (vittima2 != null)
             {
-                //vittima2.gameObject.GetComponentInChildren<Outline>().enabled = true;
+
+                vittima2.gameObject.GetComponentInChildren<Outline>().enabled = true;
 
                 vittima2.gameObject.SetActive(true);
                 vittima2.transform.position = spawnPoint2.position;

@@ -551,6 +551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4951458136432428}
   - component: {fileID: 137782561029517660}
+  - component: {fileID: 114214922546884440}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -567,6 +568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4560356411586260}
   - component: {fileID: 137657101388948944}
+  - component: {fileID: 114997018434153908}
   m_Layer: 0
   m_Name: Sphere001
   m_TagString: Untagged
@@ -1330,6 +1332,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114214922546884440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1901316661941678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 1
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114388818177298628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1429,6 +1446,21 @@ MonoBehaviour:
     type: 2}
   capelliSpawnPoint: {fileID: 1185124268164518}
   baffiSpawnPoint: {fileID: 1428309228253354}
+--- !u!114 &114997018434153908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989167271463412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 1
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!135 &135273169303555226
 SphereCollider:
   m_ObjectHideFlags: 1

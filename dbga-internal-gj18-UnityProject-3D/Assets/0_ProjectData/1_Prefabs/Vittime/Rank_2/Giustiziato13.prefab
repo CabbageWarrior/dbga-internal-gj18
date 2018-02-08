@@ -282,6 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4969020287476874}
   - component: {fileID: 137832841268759280}
+  - component: {fileID: 114134657025733910}
   m_Layer: 0
   m_Name: Sphere001
   m_TagString: Untagged
@@ -565,6 +566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4340240742061054}
   - component: {fileID: 137209739726274050}
+  - component: {fileID: 114334402474000204}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -1400,6 +1402,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114134657025733910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1456709810548564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 1
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114185714908962276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1411,6 +1428,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31094d449f1a40145a31546166249d91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114334402474000204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1945061040735444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 1
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114388818177298628
 MonoBehaviour:
   m_ObjectHideFlags: 1

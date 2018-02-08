@@ -619,7 +619,7 @@ MonoBehaviour:
   Condannato1: {fileID: 0}
   Condannato2: {fileID: 0}
   mypanel: {fileID: 0}
-  currentCrowdScore: 60
+  currentCrowdScore: 50
   currentKingScore: 50
   currentNobiliUccisi: 0
   currentPopolaniUccisi: 0
