@@ -96,9 +96,9 @@ public class InputManager : MonoBehaviour
                     if (hit.transform.gameObject == Condannato1)
                     {
 
-                        Debug.Log("This is a Human1");
+                        //Debug.Log("This is a Human1");
                         selected = Condannato1;
-                        Debug.Log(selected.name);
+                        //Debug.Log(selected.name);
                         survivor = Condannato2;
                         descriptionText.text = selected.GetComponent<Condannati>().description;
                         nome.text = Condannato1.GetComponent<Condannati>().Nome;
@@ -110,9 +110,9 @@ public class InputManager : MonoBehaviour
                     else
                     {
                         mypanel.SetActive(true);
-                        Debug.Log("This is a Human");
+                        //Debug.Log("This is a Human");
                         selected = Condannato2;
-                        Debug.Log(selected.name);
+                        //Debug.Log(selected.name);
                         survivor = Condannato1;
                         descriptionText.text = selected.GetComponent<Condannati>().description;
                         nome.text = Condannato2.GetComponent<Condannati>().Nome;
@@ -208,7 +208,7 @@ public class InputManager : MonoBehaviour
 
                     selected = null;
                     survivor = null;
-                    Debug.Log("This isn't a Player");
+                    //Debug.Log("This isn't a Player");
                     // descriptionText.text = "";
                     //nome.text = "";
                     //crimine.text = "";

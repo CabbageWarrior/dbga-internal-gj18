@@ -56,21 +56,21 @@ public class Condannati : MonoBehaviour
     // Public Methods
     public void Select()
     {
-        Debug.Log("\"" + name + "\" Selected...");
+        //Debug.Log("\"" + name + "\" Selected...");
     }
     public void Unselect()
     {
-        Debug.Log("\"" + name + "\" Unselected...");
+        //Debug.Log("\"" + name + "\" Unselected...");
     }
 
     public void Survive()
     {
-        Debug.Log("\"" + name + "\" survived.");
+        //Debug.Log("\"" + name + "\" survived.");
         animator.SetTrigger("Sopravvissuto");
     }
     public void PrepareToDie()
     {
-        Debug.Log("\"" + name + "\" sas to die.");
+       // Debug.Log("\"" + name + "\" sas to die.");
         StartCoroutine(PrepareToDie_Coroutine());
     }
 
