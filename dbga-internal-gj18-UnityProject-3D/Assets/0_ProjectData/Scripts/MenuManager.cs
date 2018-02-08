@@ -61,7 +61,7 @@ public class MenuManager : MonoBehaviour
 
     private void Awake()
     {
-        Application.targetFrameRate = -1;
+        Application.targetFrameRate = 30;
     }
 
     void Update(){
