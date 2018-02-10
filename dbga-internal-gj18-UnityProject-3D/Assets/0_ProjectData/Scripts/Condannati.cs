@@ -6,6 +6,7 @@ using DG.Tweening;
 
 public class Condannati : MonoBehaviour
 {
+    float tempoDiAttesaMorte = 1.7f;
     public bool enableSangue = true;
 
     [Space]
@@ -108,10 +109,10 @@ public class Condannati : MonoBehaviour
         yield return new WaitForSeconds(rotationMaxTime);
 
         animator.SetTrigger("Posizionato");
-        yield return new WaitForSeconds(2.8f);
+        yield return new WaitForSeconds(tempoDiAttesaMorte);
         animator.SetTrigger("Morto");
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         GM.checkState(GameManager.State.INTERMEZZO);
         //yield return new WaitForSeconds(0.5f);
         //transform.position = defaultTransform;
