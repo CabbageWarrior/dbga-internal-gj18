@@ -2,61 +2,72 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathBehaviour : StateMachineBehaviour {
-	bool hasSangue = false;
-	Condannati myCondannatiComponent;
+public class DeathBehaviour : StateMachineBehaviour
+{
+    bool hasSangue = false;
+    Condannati myCondannatiComponent;
 
-	 //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		myCondannatiComponent = animator.GetComponentInParent<Condannati> ();
-		hasSangue = myCondannatiComponent && myCondannatiComponent.sangue;
+    //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        myCondannatiComponent = animator.GetComponentInParent<Condannati>();
 
-		if (hasSangue) {
-			myCondannatiComponent.sangue.SetActive (true);
-		}
+        if (myCondannatiComponent.enableSangue)
+        {
+            hasSangue = myCondannatiComponent && myCondannatiComponent.sangue;
 
-		Transform head = animator.transform.Find ("Sphere001");
+            if (hasSangue)
+            {
+                myCondannatiComponent.sangue.SetActive(true);
+            }
+        }
 
-		if (head) {
-			
+        Transform head = animator.transform.Find("Sphere001");
 
-			//GameObject newHead = Instantiate (head.gameObject);
+        if (head)
+        {
+            if (myCondannatiComponent.singleHeadPrefab)
+            {
+                OcchiEPelame thisOcchiEPelame = myCondannatiComponent.GetComponentInChildren<OcchiEPelame>();
 
-			head.gameObject.SetActive (false);
+                GameObject singleHeadInstance = Instantiate(myCondannatiComponent.singleHeadPrefab, thisOcchiEPelame.transform.position, thisOcchiEPelame.transform.rotation);
+                GameObject newPelameVario = Instantiate(thisOcchiEPelame.gameObject, singleHeadInstance.transform.GetChild(0).GetChild(0));
 
+                if (myCondannatiComponent.enableSangue)
+                {
+                    singleHeadInstance.GetComponent<SingleHead>().sangueGameObject.SetActive(true);
+                }
 
-//			//newHead.GetComponent<Renderer> ().enabled = false;
-//			Destroy(newHead.GetComponent("SkinnedMeshRenderer"));
-//
-//				
-//			Rigidbody aaa = newHead.gameObject.AddComponent<Rigidbody>();
-//			aaa.useGravity = false;
-//			aaa.isKinematic = true;
-//			aaa.AddForce ((Camera.main.transform.position - newHead.transform.position).normalized * 4, ForceMode.Impulse);
-		}
+                singleHeadInstance.GetComponentInChildren<Rigidbody>().AddForce(((Camera.main.transform.position - singleHeadInstance.transform.position).normalized + Vector3.up) * 18, ForceMode.Impulse);
+            }
 
-		animator.transform.GetComponentInChildren <OcchiEPelame>().gameObject.SetActive (false);
-	}
+            head.gameObject.SetActive(false);
+        }
 
-	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-	//override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//
-	//}
+        animator.transform.GetComponentInChildren<OcchiEPelame>().gameObject.SetActive(false);
+    }
 
-	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		if (hasSangue) {
-			myCondannatiComponent.sangue.SetActive (false);
-		}
-	}
+    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
+    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+    //
+    //}
 
-	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
-	//override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//
-	//}
+    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        if (myCondannatiComponent.enableSangue && hasSangue)
+        {
+            myCondannatiComponent.sangue.SetActive(false);
+        }
+    }
 
-	// OnStateIK is called right after Animator.OnAnimatorIK(). Code that sets up animation IK (inverse kinematics) should be implemented here.
-	//override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//
-	//}
+    // OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
+    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+    //
+    //}
+
+    // OnStateIK is called right after Animator.OnAnimatorIK(). Code that sets up animation IK (inverse kinematics) should be implemented here.
+    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+    //
+    //}
 }

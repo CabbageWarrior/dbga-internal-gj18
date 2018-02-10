@@ -6,7 +6,11 @@ using DG.Tweening;
 
 public class Condannati : MonoBehaviour
 {
+    public bool enableSangue = true;
+
+    [Space]
     public GameObject sangue;
+    public GameObject singleHeadPrefab;
 
     public enum Rank { NOBILE, POPOLANO }
 
@@ -39,11 +43,21 @@ public class Condannati : MonoBehaviour
     // Private data
     public bool isAlive = true;
     [HideInInspector] public Animator animator;
+    //GameObject singleHeadInstance;
 
     private void Awake()
     {
         defaultTransform = transform.position;
-        
+
+        //if (singleHeadPrefab)
+        //{
+        //    OcchiEPelame thisOcchiEPelame = GetComponentInChildren<OcchiEPelame>();
+
+        //    singleHeadInstance = Instantiate(singleHeadPrefab, thisOcchiEPelame.transform.parent);
+        //    GameObject newPelameVario = Instantiate(thisOcchiEPelame.gameObject, singleHeadInstance.transform);
+
+        //    //singleHeadInstance.SetActive(false);
+        //}
     }
 
     void Start()
@@ -71,7 +85,7 @@ public class Condannati : MonoBehaviour
     }
     public void PrepareToDie()
     {
-       // Debug.Log("\"" + name + "\" sas to die.");
+        // Debug.Log("\"" + name + "\" sas to die.");
         StartCoroutine(PrepareToDie_Coroutine());
     }
 
@@ -81,7 +95,7 @@ public class Condannati : MonoBehaviour
         yield return null;
 
         transform.DOLookAt(deathPosition.transform.position, rotationMaxTime, AxisConstraint.Y);
-		yield return new WaitForSeconds(rotationMaxTime);
+        yield return new WaitForSeconds(rotationMaxTime);
 
         while (Mathf.Abs((transform.position - deathPosition.transform.position).sqrMagnitude) > proximityTolerance * proximityTolerance)
         {
@@ -90,8 +104,8 @@ public class Condannati : MonoBehaviour
             yield return null;
         }
 
-		transform.DOLookAt(deathPosition.transform.parent.position, rotationMaxTime, AxisConstraint.Y);
-		yield return new WaitForSeconds(rotationMaxTime);
+        transform.DOLookAt(deathPosition.transform.parent.position, rotationMaxTime, AxisConstraint.Y);
+        yield return new WaitForSeconds(rotationMaxTime);
 
         animator.SetTrigger("Posizionato");
         yield return new WaitForSeconds(2.8f);
@@ -105,8 +119,8 @@ public class Condannati : MonoBehaviour
 
     }
 
-	public void ShotTesta()
-	{
-		GetComponent<Rigidbody> ().AddForce ((Camera.main.transform.position - transform.position).normalized * 4, ForceMode.Impulse);
-	}
+    public void ShotTesta()
+    {
+        GetComponent<Rigidbody>().AddForce((Camera.main.transform.position - transform.position).normalized * 4, ForceMode.Impulse);
+    }
 }
