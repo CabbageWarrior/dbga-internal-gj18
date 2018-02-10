@@ -34,6 +34,7 @@ public class Condannati : MonoBehaviour
     public GameObject deathPosition;
     public float walkSpeed = .5f;
     public float proximityTolerance = .1f;
+    public float rotationMaxTime = .15f;
     GameManager GM;
     // Private data
     public bool isAlive = true;
@@ -79,8 +80,8 @@ public class Condannati : MonoBehaviour
         animator.SetTrigger("Morente");
         yield return null;
 
-        transform.DOLookAt(deathPosition.transform.position, walkSpeed, AxisConstraint.Y);
-		yield return new WaitForSeconds(walkSpeed);
+        transform.DOLookAt(deathPosition.transform.position, rotationMaxTime, AxisConstraint.Y);
+		yield return new WaitForSeconds(rotationMaxTime);
 
         while (Mathf.Abs((transform.position - deathPosition.transform.position).sqrMagnitude) > proximityTolerance * proximityTolerance)
         {
@@ -89,11 +90,11 @@ public class Condannati : MonoBehaviour
             yield return null;
         }
 
-		transform.DOLookAt(deathPosition.transform.parent.position, walkSpeed, AxisConstraint.Y);
-		yield return new WaitForSeconds(walkSpeed);
+		transform.DOLookAt(deathPosition.transform.parent.position, rotationMaxTime, AxisConstraint.Y);
+		yield return new WaitForSeconds(rotationMaxTime);
 
         animator.SetTrigger("Posizionato");
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2.8f);
         animator.SetTrigger("Morto");
 
         yield return new WaitForSeconds(3);
