@@ -42,8 +42,8 @@ public class GameManager : MonoBehaviour
         }
         else if (newState == State.ENDTURN && currentState != State.ENDTURN)
         {
-            vittima2.gameObject.GetComponentInChildren<Outline>().enabled = false;
-            vittima1.gameObject.GetComponentInChildren<Outline>().enabled = false;
+            //vittima2.gameObject.GetComponentInChildren<Outline>().enabled = false;
+            //vittima1.gameObject.GetComponentInChildren<Outline>().enabled = false;
             currentState = State.ENDTURN;
             actualTurn++;
         }
@@ -145,7 +145,7 @@ public class GameManager : MonoBehaviour
         {
             vittima1.gameObject.SetActive(true);
 
-            vittima1.gameObject.GetComponentInChildren<Outline>().enabled = true;
+            //vittima1.gameObject.GetComponentInChildren<Outline>().enabled = true;
             vittima1.transform.position = spawnPoint1.position;
             inputManager.Condannato1 = vittima1.gameObject;
             vittima2 = vittima1.possibleMatches[Random.Range(0, vittima1.possibleMatches.Length)].GetComponent<Condannati>();
@@ -159,7 +159,7 @@ public class GameManager : MonoBehaviour
             if (vittima2 != null)
             {
 
-                vittima2.gameObject.GetComponentInChildren<Outline>().enabled = true;
+                //vittima2.gameObject.GetComponentInChildren<Outline>().enabled = true;
 
                 vittima2.gameObject.SetActive(true);
                 vittima2.transform.position = spawnPoint2.position;

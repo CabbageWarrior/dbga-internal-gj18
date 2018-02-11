@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4560908739790496}
   - component: {fileID: 65117838442679562}
-  - component: {fileID: 65492429500605794}
   m_Layer: 0
   m_Name: Ceppo
   m_TagString: Untagged
@@ -234,7 +233,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1545356211045218}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.0215, y: -0.161, z: 0.255}
+  m_LocalPosition: {x: -0.0127, y: -0.161, z: 0.519}
   m_LocalScale: {x: 0.1, y: 1, z: 0.25000006}
   m_Children:
   - {fileID: 4743787856495622}
@@ -429,18 +428,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.45, z: -0.26}
---- !u!65 &65492429500605794
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1545356211045218}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.45, z: -0.26}
 --- !u!95 &95345105764146244
 Animator:
   serializedVersion: 3
@@ -464,7 +451,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1846595365736208}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
   m_Name: 

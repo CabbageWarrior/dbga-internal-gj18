@@ -23,7 +23,7 @@ public class InputManager : MonoBehaviour
     private Condannati condannati;
 
     private Image crowdScore;
-    private cakeslice.Outline ceppo;
+   // private cakeslice.Outline ceppo;
 
     private Image kingScore;
     private Text descriptionText;
@@ -60,22 +60,22 @@ public class InputManager : MonoBehaviour
         kingSphere = GameObject.Find("KingCircle").GetComponent<Image>();
         mypanel = GameObject.Find("Panel");
         mypanel.SetActive(false);
-        ceppo = GetComponentInChildren<cakeslice.Outline>();
-        ceppo.enabled = false;
+        //ceppo = GetComponentInChildren<cakeslice.Outline>();
+        //ceppo.enabled = false;
     }
 
     void Update()
     {
         if (selected != null)
         {
-            ceppo.enabled = true;
+            //ceppo.enabled = true;
             //selected.GetComponentInChildren<Outline>().enabled = false;
 
             mypanel.SetActive(true);
         }
         else
         {
-            ceppo.enabled = false;
+            //ceppo.enabled = false;
         }
 
 
